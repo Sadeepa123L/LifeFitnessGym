@@ -12,20 +12,9 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="473.0" prefWidth="729.0" style="-fx-background-color: #dfe4ea;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.lifefitnessgym.controller.MemberPageController">
+<AnchorPane prefHeight="642.0" prefWidth="820.0" style="-fx-background-color: linear-gradient(to bottom right, #e3f2fd, #bbdefb);" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.lifefitnessgym.controller.MemberPageController">
    <children>
-      <TableView fx:id="memberTable" layoutX="-1.0" layoutY="238.4" onMouseClicked="#onClickTable" prefHeight="235.0" prefWidth="730.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="-1.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="238.0">
-        <columns>
-          <TableColumn fx:id="colId" prefWidth="75.0" text="Member Id" />
-          <TableColumn fx:id="colName" prefWidth="75.0" text="Name" />
-            <TableColumn fx:id="colAddress" prefWidth="75.0" text="Address" />
-            <TableColumn fx:id="colContact" prefWidth="75.0" text="Contact" />
-        </columns>
-         <columnResizePolicy>
-            <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
-         </columnResizePolicy>
-      </TableView>
-      <VBox prefHeight="204.0" prefWidth="499.0" spacing="20.0" AnchorPane.bottomAnchor="291.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="230.0" AnchorPane.topAnchor="0.0">
+      <VBox layoutX="11.2" layoutY="12.0" prefHeight="240.0" prefWidth="570.0" spacing="20.0" style="-fx-padding: 20px; -fx-background-color: #ffffff; -fx-background-radius: 20px; -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.2), 20, 0, 0, 10);" AnchorPane.leftAnchor="11.0" AnchorPane.rightAnchor="239.0" AnchorPane.topAnchor="12.0">
          <children>
             <HBox prefHeight="26.0" prefWidth="200.0" spacing="14.0">
                <children>
@@ -67,7 +56,7 @@
                   <TextField fx:id="txtContact" prefHeight="26.0" prefWidth="407.0" promptText="077777777" style="-fx-background-radius: 20;" HBox.hgrow="ALWAYS" />
                </children>
             </HBox>
-            <HBox alignment="TOP_CENTER" prefHeight="110.0" prefWidth="499.0" spacing="20.0">
+            <HBox alignment="TOP_CENTER" prefHeight="50.0" prefWidth="530.0" spacing="20.0">
                <children>
                   <Button fx:id="btnReset" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#btnResetPageOnAction" prefHeight="26.0" prefWidth="103.0" style="-fx-background-color: #D3D3D3; -fx-background-radius: 5;" text="reset" HBox.hgrow="ALWAYS">
                      <font>
@@ -93,9 +82,20 @@
             </HBox>
          </children>
       </VBox>
-      <HBox alignment="TOP_RIGHT" layoutX="555.0" layoutY="36.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="158.0" prefWidth="160.0" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="36.0">
+      <TableView fx:id="memberTable" layoutX="11.2" layoutY="280.0" onMouseClicked="#onClickTable" prefHeight="353.0" prefWidth="798.0" style="-fx-background-color: #ffffff; -fx-background-radius: 20px; -fx-border-color: #cfe9f7; -fx-border-width: 1px; -fx-border-radius: 20px; -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.1), 10, 0, 0, 5);" AnchorPane.bottomAnchor="9.0" AnchorPane.leftAnchor="11.0" AnchorPane.rightAnchor="11.0" AnchorPane.topAnchor="280.0">
+        <columns>
+          <TableColumn fx:id="colId" prefWidth="75.0" style="-fx-font-size: 14px; -fx-font-weight: bold; -fx-background-color: #e0f2f7; -fx-text-fill: #4a4a4a; -fx-border-color: #ffff;" text="Member Id" />
+          <TableColumn fx:id="colName" prefWidth="75.0" style="-fx-font-size: 14px; -fx-font-weight: bold; -fx-background-color: #e0f2f7; -fx-text-fill: #4a4a4a; -fx-border-color: #ffff;" text="Name" />
+            <TableColumn fx:id="colAddress" prefWidth="75.0" style="-fx-font-size: 14px; -fx-font-weight: bold; -fx-background-color: #e0f2f7; -fx-text-fill: #4a4a4a; -fx-border-color: #ffff;" text="Address" />
+            <TableColumn fx:id="colContact" prefWidth="75.0" style="-fx-font-size: 14px; -fx-font-weight: bold; -fx-background-color: #e0f2f7; -fx-text-fill: #4a4a4a; -fx-border-color: #ffff;" text="Contact" />
+        </columns>
+         <columnResizePolicy>
+            <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+         </columnResizePolicy>
+      </TableView>
+      <HBox alignment="TOP_RIGHT" layoutX="532.0" layoutY="27.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="193.0" prefWidth="190.0" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="27.0">
          <children>
-            <ImageView fitHeight="160.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="192.0" fitWidth="190.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../images/LIFE%20FITNESS.png" />
                </image></ImageView>

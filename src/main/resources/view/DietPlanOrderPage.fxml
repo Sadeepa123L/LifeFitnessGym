@@ -12,164 +12,156 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="500.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.lifefitnessgym.controller.DietPlanOrderController">
-    <children>
-        <VBox prefHeight="500.0" prefWidth="600.0" spacing="20.0" style="-fx-background-color: #fff;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
-            <children>
-                <VBox spacing="10.0">
-                    <children>
-                        <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="160.0" prefHeight="27.2">
-                            <children>
-                                <HBox alignment="CENTER_LEFT" prefHeight="27.2" HBox.hgrow="ALWAYS">
-                                    <children>
-                                        <Label prefWidth="150.0" text="Order Id" HBox.hgrow="ALWAYS">
-                                            <font>
-                                                <Font name="Calibri" size="14.0" />
-                                            </font>
-                                        </Label>
-                                        <Label fx:id="lblOrderId" layoutX="10.0" layoutY="15.0" maxWidth="500.0" prefHeight="18.0" prefWidth="300.0" text="1" HBox.hgrow="ALWAYS">
-                                            <font>
-                                                <Font name="Calibri" size="14.0" />
-                                            </font>
-                                        </Label>
-                                    </children>
-                                </HBox>
-                                <HBox alignment="CENTER_LEFT">
-                                    <children>
-                                        <Label prefWidth="150.0" text="Order Date" HBox.hgrow="ALWAYS">
-                                            <font>
-                                                <Font name="Calibri" size="14.0" />
-                                            </font>
-                                        </Label>
-                                        <Label fx:id="orderDate" layoutX="10.0" layoutY="15.0" prefWidth="150.0" text="2099-01-01">
-                                            <font>
-                                                <Font name="Calibri" size="14.0" />
-                                            </font>
-                                        </Label>
-                                    </children>
-                                </HBox>
-                            </children>
-                        </HBox>
-                        <HBox alignment="CENTER_LEFT" spacing="20.0" style="-fx-border-color: #000; -fx-border-width: 0 0 1px 0;">
-                            <children>
-                                <HBox alignment="CENTER_LEFT">
-                                    <children>
-                                        <Label prefWidth="150.0" text="Member Id" HBox.hgrow="ALWAYS">
-                                            <font>
-                                                <Font name="Calibri" size="14.0" />
-                                            </font>
-                                        </Label>
-                                        <ComboBox fx:id="cmbMemberId" onAction="#cmbMemberOnAction" prefWidth="150.0" style="-fx-background-color: #ffffff; -fx-border-color: #7367F0; -fx-border-width: 0 0 1px 0;" />
-                                    </children>
-                                </HBox>
-                                <HBox alignment="CENTER_LEFT">
-                                    <children>
-                                        <Label prefWidth="150.0" text="Member name" HBox.hgrow="ALWAYS">
-                                            <font>
-                                                <Font name="Calibri" size="14.0" />
-                                            </font>
-                                        </Label>
-                                        <Label fx:id="lblMemberName" prefWidth="150.0" text="name">
-                                            <font>
-                                                <Font name="Calibri" size="14.0" />
-                                            </font>
-                                        </Label>
-                                    </children>
-                                </HBox>
-                            </children>
-                            <VBox.margin>
-                                <Insets bottom="10.0" />
-                            </VBox.margin>
-                            <padding>
-                                <Insets bottom="5.0" />
-                            </padding>
-                        </HBox>
-                        <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="42.0" spacing="20.0">
-                            <children>
-                                <HBox alignment="CENTER_LEFT">
-                                    <children>
-                                        <Label prefWidth="150.0" text="Diet Plan Id" HBox.hgrow="ALWAYS">
-                                            <font>
-                                                <Font name="Calibri" size="14.0" />
-                                            </font>
-                                        </Label>
-                                        <ComboBox fx:id="cmbPlanId" onAction="#cmbPlanOnAction" prefWidth="150.0" style="-fx-background-color: #ffffff; -fx-border-color: #7367F0; -fx-border-width: 0 0 1px 0;" />
-                                    </children>
-                                </HBox>
-                                <HBox alignment="CENTER_LEFT">
-                                    <children>
-                                        <Label prefWidth="150.0" text="Diet plan name" HBox.hgrow="ALWAYS">
-                                            <font>
-                                                <Font name="Calibri" size="14.0" />
-                                            </font>
-                                        </Label>
-                                        <Label fx:id="lblPlanName" prefWidth="150.0" text="name">
-                                            <font>
-                                                <Font name="Calibri" size="14.0" />
-                                            </font>
-                                        </Label>
-                                    </children>
-                                </HBox>
-                            </children>
-                        </HBox>
-                        <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="73.0" spacing="20.0">
-                            <children>
-                                <HBox alignment="CENTER_LEFT" prefHeight="18.0" prefWidth="297.0" />
-                                <HBox alignment="CENTER_LEFT">
-                                    <children>
-                                        <Label prefHeight="18.0" prefWidth="136.0" text="Price" HBox.hgrow="ALWAYS">
-                                            <font>
-                                                <Font name="Calibri" size="14.0" />
-                                            </font>
-                                        </Label>
-                                    </children>
-                                </HBox>
-                                  <Label fx:id="lblItemPrice" prefHeight="18.0" prefWidth="164.0" text="0.00">
-                                      <font>
-                                          <Font name="Calibri" size="14.0" />
-                                      </font>
-                                  </Label>
-                            </children>
-                        </HBox>
-                        <HBox alignment="CENTER_RIGHT" spacing="30.0" />
-                    </children>
-                </VBox>
-                <TableView fx:id="DietOrderTable" prefHeight="200.0" prefWidth="200.0" VBox.vgrow="ALWAYS">
-                    <columns>
-                        <TableColumn fx:id="colOrderId" prefWidth="75.0" text="Order Id" />
-                        <TableColumn fx:id="colMemberId" prefWidth="75.0" text="Member Id" />
-                        <TableColumn fx:id="colPlanId" prefWidth="75.0" text="Diet Plan Id" />
-                        <TableColumn fx:id="colPrice" prefWidth="75.0" text="Price" />
-                  <TableColumn fx:id="colDate" prefWidth="75.0" text="Order Date" />
-                    </columns>
-                    <columnResizePolicy>
-                        <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
-                    </columnResizePolicy>
-                </TableView>
-                <HBox alignment="CENTER_RIGHT" spacing="30.0">
-                    <children>
-                        <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#btnResetOnAction" prefWidth="80.0" style="-fx-background-color: #e74c3c;" text="Reset" textFill="WHITE" HBox.hgrow="ALWAYS">
-                            <font>
-                                <Font name="Calibri Bold" size="14.0" />
+<AnchorPane prefHeight="500.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.lifefitnessgym.controller.DietPlanOrderController"
+            style="-fx-background-color: linear-gradient(to bottom right, #c3e8e1, #a7d9f7);"> <children>
+    <VBox prefHeight="500.0" prefWidth="600.0" spacing="20.0"
+          style="-fx-background-color: #ffffff; -fx-background-radius: 20px; -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.2), 20, 0, 0, 10);" AnchorPane.bottomAnchor="15.0" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="15.0"> <children>
+        <VBox spacing="15.0"> <children>
+            <HBox alignment="CENTER_LEFT" prefHeight="27.2">
+                <children>
+                    <HBox alignment="CENTER_LEFT" prefHeight="27.2" HBox.hgrow="ALWAYS">
+                        <children>
+                            <Label prefWidth="150.0" text="Order Id" HBox.hgrow="ALWAYS" style="-fx-font-family: 'Inter', sans-serif; -fx-text-fill: #2c3e50;"> <font>
+                                <Font size="14.0" />
                             </font>
-                            <cursor>
-                                <Cursor fx:constant="CLOSED_HAND" />
-                            </cursor>
-                        </Button>
-                        <Button layoutX="10.0" layoutY="10.0" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#btnPlaceOrderOnAction" prefWidth="80.0" style="-fx-background-color: #2ecc71;" text="Place Order" textFill="WHITE" HBox.hgrow="ALWAYS">
-                            <font>
-                                <Font name="Calibri Bold" size="14.0" />
+                            </Label>
+                            <Label fx:id="lblOrderId" maxWidth="500.0" prefHeight="18.0" prefWidth="300.0" text="1" HBox.hgrow="ALWAYS" style="-fx-font-family: 'Inter', sans-serif; -fx-font-weight: bold; -fx-text-fill: #34495e;"> <font>
+                                <Font size="14.0" />
                             </font>
-                            <cursor>
-                                <Cursor fx:constant="CLOSED_HAND" />
-                            </cursor>
-                        </Button>
+                            </Label>
+                        </children>
+                    </HBox>
+                    <HBox alignment="CENTER_LEFT">
+                        <children>
+                            <Label prefWidth="150.0" text="Order Date" HBox.hgrow="ALWAYS" style="-fx-font-family: 'Inter', sans-serif; -fx-text-fill: #2c3e50;">
+                                <font>
+                                    <Font size="14.0" />
+                                </font>
+                            </Label>
+                            <Label fx:id="orderDate" prefWidth="150.0" text="2099-01-01" style="-fx-font-family: 'Inter', sans-serif; -fx-font-weight: bold; -fx-text-fill: #34495e;">
+                                <font>
+                                    <Font size="14.0" />
+                                </font>
+                            </Label>
+                        </children>
+                    </HBox>
+                </children>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" spacing="20.0" style="-fx-border-color: #e0e0e0; -fx-border-width: 0 0 1px 0;"> <children>
+                <HBox alignment="CENTER_LEFT">
+                    <children>
+                        <Label prefWidth="150.0" text="Member Id" HBox.hgrow="ALWAYS" style="-fx-font-family: 'Inter', sans-serif; -fx-text-fill: #2c3e50;">
+                            <font>
+                                <Font size="14.0" />
+                            </font>
+                        </Label>
+                        <ComboBox fx:id="cmbMemberId" onAction="#cmbMemberOnAction" prefWidth="150.0"
+                                  style="-fx-background-color: #f5f8fa; -fx-border-color: #a7d9f7; -fx-border-width: 1px; -fx-border-radius: 8px; -fx-padding: 5px 10px; -fx-font-size: 13px; -fx-text-fill: #333333;" /> </children>
+                </HBox>
+                <HBox alignment="CENTER_LEFT">
+                    <children>
+                        <Label prefWidth="150.0" text="Member name" HBox.hgrow="ALWAYS" style="-fx-font-family: 'Inter', sans-serif; -fx-text-fill: #2c3e50;">
+                            <font>
+                                <Font size="14.0" />
+                            </font>
+                        </Label>
+                        <Label fx:id="lblMemberName" prefWidth="150.0" text="name" style="-fx-font-family: 'Inter', sans-serif; -fx-font-weight: bold; -fx-text-fill: #34495e;">
+                            <font>
+                                <Font size="14.0" />
+                            </font>
+                        </Label>
                     </children>
                 </HBox>
             </children>
-            <padding>
-                <Insets bottom="10.0" left="20.0" right="20.0" top="10.0" />
-            </padding>
+                <VBox.margin>
+                    <Insets bottom="10.0" />
+                </VBox.margin>
+                <padding>
+                    <Insets bottom="5.0" />
+                </padding>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" spacing="20.0">
+                <children>
+                    <HBox alignment="CENTER_LEFT">
+                        <children>
+                            <Label prefWidth="150.0" text="Diet Plan Id" HBox.hgrow="ALWAYS" style="-fx-font-family: 'Inter', sans-serif; -fx-text-fill: #2c3e50;">
+                                <font>
+                                    <Font size="14.0" />
+                                </font>
+                            </Label>
+                            <ComboBox fx:id="cmbPlanId" onAction="#cmbPlanOnAction" prefWidth="150.0"
+                                      style="-fx-background-color: #f5f8fa; -fx-border-color: #a7d9f7; -fx-border-width: 1px; -fx-border-radius: 8px; -fx-padding: 5px 10px; -fx-font-size: 13px; -fx-text-fill: #333333;" /> </children>
+                    </HBox>
+                    <HBox alignment="CENTER_LEFT">
+                        <children>
+                            <Label prefWidth="150.0" text="Diet plan name" HBox.hgrow="ALWAYS" style="-fx-font-family: 'Inter', sans-serif; -fx-text-fill: #2c3e50;">
+                                <font>
+                                    <Font size="14.0" />
+                                </font>
+                            </Label>
+                            <Label fx:id="lblPlanName" prefWidth="150.0" text="name" style="-fx-font-family: 'Inter', sans-serif; -fx-font-weight: bold; -fx-text-fill: #34495e;">
+                                <font>
+                                    <Font size="14.0" />
+                                </font>
+                            </Label>
+                        </children>
+                    </HBox>
+                </children>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" spacing="20.0">
+                <children>
+                    <HBox alignment="CENTER_LEFT" prefHeight="18.0" prefWidth="297.0" />
+                    <HBox alignment="CENTER_LEFT">
+                        <children>
+                            <Label prefHeight="18.0" prefWidth="136.0" text="Price" HBox.hgrow="ALWAYS" style="-fx-font-family: 'Inter', sans-serif; -fx-text-fill: #2c3e50;">
+                                <font>
+                                    <Font size="14.0" />
+                                </font>
+                            </Label>
+                        </children>
+                    </HBox>
+                    <Label fx:id="lblItemPrice" prefHeight="18.0" prefWidth="164.0" text="0.00" style="-fx-font-family: 'Inter', sans-serif; -fx-font-weight: bold; -fx-text-fill: #28a745;"> <font>
+                        <Font size="14.0" />
+                    </font>
+                    </Label>
+                </children>
+            </HBox>
+        </children>
         </VBox>
+        <TableView fx:id="DietOrderTable" prefHeight="200.0" prefWidth="200.0" VBox.vgrow="ALWAYS"
+                   style="-fx-background-color: #ffffff; -fx-background-radius: 15px; -fx-border-color: #cfe9f7; -fx-border-width: 1px; -fx-border-radius: 15px; -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.1), 10, 0, 0, 5);"> <columns>
+            <TableColumn fx:id="colOrderId" prefWidth="75.0" text="Order Id" style="-fx-font-size: 14px; -fx-font-weight: bold; -fx-background-color: #e0f2f7; -fx-text-fill: #4a4a4a;"/> <TableColumn fx:id="colMemberId" prefWidth="75.0" text="Member Id" style="-fx-font-size: 14px; -fx-font-weight: bold; -fx-background-color: #e0f2f7; -fx-text-fill: #4a4a4a;"/>
+            <TableColumn fx:id="colPlanId" prefWidth="75.0" text="Diet Plan Id" style="-fx-font-size: 14px; -fx-font-weight: bold; -fx-background-color: #e0f2f7; -fx-text-fill: #4a4a4a;"/>
+            <TableColumn fx:id="colPrice" prefWidth="75.0" text="Price" style="-fx-font-size: 14px; -fx-font-weight: bold; -fx-background-color: #e0f2f7; -fx-text-fill: #4a4a4a;"/>
+            <TableColumn fx:id="colDate" prefWidth="75.0" text="Order Date" style="-fx-font-size: 14px; -fx-font-weight: bold; -fx-background-color: #e0f2f7; -fx-text-fill: #4a4a4a;"/>
+        </columns>
+            <columnResizePolicy>
+                <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+            </columnResizePolicy>
+        </TableView>
+        <HBox alignment="CENTER_RIGHT" spacing="30.0">
+            <children>
+                <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#btnResetOnAction" prefWidth="120.0"
+                        style="-fx-background-color: linear-gradient(to right, #ff416c, #ff4b2b); -fx-text-fill: white; -fx-font-size: 15px; -fx-font-weight: bold; -fx-background-radius: 10px; -fx-padding: 10px 20px; -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.2), 10, 0, 0, 5); -fx-cursor: hand;" text="Reset" HBox.hgrow="ALWAYS"> <font>
+                    <Font name="Calibri Bold" size="14.0" />
+                </font>
+                    <cursor>
+                        <Cursor fx:constant="HAND" />
+                    </cursor>
+                </Button>
+                <Button layoutX="10.0" layoutY="10.0" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#btnPlaceOrderOnAction" prefWidth="120.0"
+                        style="-fx-background-color: linear-gradient(to right, #11998e, #38ef7d); -fx-text-fill: white; -fx-font-size: 15px; -fx-font-weight: bold; -fx-background-radius: 10px; -fx-padding: 10px 20px; -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.2), 10, 0, 0, 5); -fx-cursor: hand;" text="Place Order" HBox.hgrow="ALWAYS"> <font>
+                    <Font name="Calibri Bold" size="14.0" />
+                </font>
+                    <cursor>
+                        <Cursor fx:constant="HAND" />
+                    </cursor>
+                </Button>
+            </children>
+        </HBox>
     </children>
+        <padding>
+            <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" /> </padding>
+    </VBox>
+</children>
 </AnchorPane>
