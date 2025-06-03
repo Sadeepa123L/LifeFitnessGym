@@ -33,7 +33,7 @@
                         <Font name="Arial" size="15.0" />
                      </font>
                   </Label>
-                  <TextField fx:id="txtName" prefHeight="26.0" prefWidth="407.0" promptText="member" style="-fx-background-radius: 20;" HBox.hgrow="ALWAYS" />
+                  <TextField fx:id="txtName" prefHeight="26.0" prefWidth="407.0" promptText="member" style="-fx-background-radius: 20; -fx-background-color: #f5f8fa; -fx-border-color: #a7d9f7; -fx-border-radius: 10; -fx-padding: 10px 15px; -fx-font-size: 14; -fx-text-fill: #333333; -fx-prompt-text-fill: #95a5a6;" HBox.hgrow="ALWAYS" />
                </children>
             </HBox>
             <HBox prefHeight="26.0" prefWidth="200.0" spacing="10.0">
@@ -73,7 +73,7 @@
                         <Font name="Arial Black" size="11.0" />
                      </font>
                   </Button>
-                  <Button fx:id="btnSave" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#btnSaveMemberOnAction" prefHeight="7.0" prefWidth="103.0" style="-fx-background-color: #98FB98; -fx-background-radius: 5;" text="save" HBox.hgrow="ALWAYS">
+                  <Button fx:id="btnSave" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#btnSaveMemberOnAction" prefHeight="7.0" prefWidth="103.0" style="-fx-background-color: linear-gradient(to right, #11998e, #38ef7d); -fx-background-radius: 10; -fx-text-fill: white; -fx-font-size: 15; -fx-font-weight: bold; -fx-padding: 10px 20px; -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.2), 10, 0, 0, 5); -fx-cursor: 10;" text="save" HBox.hgrow="ALWAYS">
                      <font>
                         <Font name="Arial Black" size="12.0" />
                      </font>
