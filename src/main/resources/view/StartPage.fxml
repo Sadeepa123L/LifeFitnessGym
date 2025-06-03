@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+
+
+<AnchorPane prefHeight="523.0" prefWidth="816.0" style="-fx-background-color: #000000;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.lifefitnessgym.controller.startpageController">
+   <children>
+      <HBox alignment="CENTER" layoutX="191.0" layoutY="80.0" prefHeight="346.0" prefWidth="432.0" style="-fx-background-color: #000000;" AnchorPane.bottomAnchor="96.60000000000002" AnchorPane.leftAnchor="191.0" AnchorPane.rightAnchor="192.79999999999995" AnchorPane.topAnchor="80.0">
+         <children>
+            <ImageView fitHeight="243.0" fitWidth="287.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../../../../Users/User/Downloads/Untitled%20design.gif" />
+               </image>
+            </ImageView>
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>

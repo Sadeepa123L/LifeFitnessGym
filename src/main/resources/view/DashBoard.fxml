@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="642.0" prefWidth="882.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.lifefitnessgym.controller.DashBoardController">
+   <children>
+      <VBox alignment="TOP_CENTER" prefHeight="642.0" prefWidth="224.0" style="-fx-background-color: #1c100b;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Label prefHeight="69.0" prefWidth="214.0" text="LIFE FITNESS GYM" textFill="#efe8e8">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+            </Label>
+            <VBox alignment="TOP_CENTER" prefHeight="574.0" prefWidth="224.0" spacing="10.0">
+               <children>
+                  <Button alignment="CENTER" mnemonicParsing="false" onAction="#btnGoMemberPageOnAction" prefHeight="38.0" prefWidth="179.0" text="Member">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Button>
+                  <Button mnemonicParsing="false" onAction="#btnGoTrainerPageOnAction" prefHeight="38.0" prefWidth="182.0" text="Trainer">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Button>
+                  <Button mnemonicParsing="false" onAction="#btnGoWorkoutSessionPageOnAction" prefHeight="38.0" prefWidth="181.0" text="Workout Session">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Button>
+                  <Button mnemonicParsing="false" onAction="#btnGoDietPlanPageOnAction" prefHeight="38.0" prefWidth="185.0" text="Diet Plan">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Button>
+                  <Button mnemonicParsing="false" onAction="#btnGoSupplementPageOnAction" prefHeight="38.0" prefWidth="185.0" text="Supplement">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Button>
+                  <Button mnemonicParsing="false" onAction="#btnGoMembershipPageOnAction" prefHeight="38.0" prefWidth="187.0" text="Membership">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Button>
+                  <Button mnemonicParsing="false" onAction="#btnGoCashierPageOnAction" prefHeight="38.0" prefWidth="186.0" text="Cashier">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Button>
+                  <Button mnemonicParsing="false" onAction="#btnGoReservationOnAction" prefHeight="38.0" prefWidth="188.0" text="Reservation">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Button>
+                  <Button mnemonicParsing="false" onAction="#btnGoDietPlanOrderPageOnAction" prefHeight="38.0" prefWidth="191.0" text="Diet Plan Order">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Button>
+                  <Button mnemonicParsing="false" onAction="#btnGoSubscriptionPageOnAction" prefHeight="38.0" prefWidth="193.0" text="Subscription">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Button>
+                  <Button mnemonicParsing="false" onAction="#btnGoSupplementOrderPageOnAction" prefHeight="38.0" prefWidth="194.0" text="Supplement Order">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Button>
+                  <Button mnemonicParsing="false" onAction="#btnGoDetailsPageOnAction" prefHeight="38.0" prefWidth="195.0" text="Supplement Order Details">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Button>
+               </children>
+            </VBox>
+         </children>
+      </VBox>
+      <AnchorPane fx:id="ancMain" layoutX="224.0" prefHeight="642.0" prefWidth="658.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="224.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="ancSingUpPage" prefHeight="550.0" prefWidth="860.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.lifefitnessgym.controller.SignUpPageController">
+   <children>
+      <VBox layoutX="416.0" layoutY="-3.0" prefHeight="556.0" prefWidth="442.0" AnchorPane.bottomAnchor="-3.0" AnchorPane.leftAnchor="416.0" AnchorPane.rightAnchor="2.0" AnchorPane.topAnchor="-3.0">
+         <children>
+            <VBox alignment="TOP_CENTER" prefHeight="139.0" prefWidth="442.0" spacing="20.0">
+               <children>
+                  <Label prefHeight="18.0" prefWidth="78.0" text="User Id" underline="true">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="txtId" prefHeight="18.0" prefWidth="59.0" text="1" />
+               </children>
+            </VBox>
+            <VBox alignment="TOP_CENTER" prefHeight="143.0" prefWidth="442.0" spacing="20.0">
+               <children>
+                  <Label text="Create User Name" underline="true">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="txtUserName" prefHeight="26.0" prefWidth="279.0" promptText="user name" style="-fx-background-radius: 20;" />
+               </children>
+            </VBox>
+            <VBox alignment="TOP_CENTER" prefHeight="133.0" prefWidth="442.0" spacing="20.0">
+               <children>
+                  <Label text="Create Password" underline="true">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="txtPassword" prefHeight="26.0" prefWidth="279.0" promptText="password" style="-fx-background-radius: 20;" />
+               </children>
+            </VBox>
+            <VBox alignment="TOP_CENTER" prefHeight="132.0" prefWidth="442.0" spacing="20.0">
+               <children>
+                  <Label text="Email" underline="true">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="txtEmail" prefHeight="26.0" prefWidth="279.0" style="-fx-background-radius: 20;" />
+               </children>
+            </VBox>
+            <HBox alignment="BOTTOM_CENTER" prefHeight="93.0" prefWidth="442.0">
+               <children>
+                  <Button mnemonicParsing="false" onAction="#btnGoLoginPageOnAction" prefHeight="46.0" prefWidth="179.0" style="-fx-background-color: #B42121;" text="Sign Up" textFill="#fcf8f8" underline="true" HBox.hgrow="ALWAYS">
+                     <font>
+                        <Font name="System Bold" size="23.0" />
+                     </font>
+                  </Button>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+      <AnchorPane prefHeight="552.0" prefWidth="413.0" style="-fx-background-color: #000000;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Label layoutX="146.0" layoutY="92.0" text="LIFE" textFill="#f7f4f4">
+               <font>
+                  <Font name="System Bold" size="71.0" />
+               </font>
+            </Label>
+            <Label layoutX="81.0" layoutY="210.0" text="FITNESS" textFill="#fcfafa">
+               <font>
+                  <Font name="System Bold" size="71.0" />
+               </font>
+            </Label>
+            <Label layoutX="127.0" layoutY="335.0" text="GYM" textFill="#efeaea">
+               <font>
+                  <Font name="System Bold" size="70.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

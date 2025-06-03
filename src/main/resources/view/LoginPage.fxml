@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Glow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="ancMain" prefHeight="559.0" prefWidth="842.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.lifefitnessgym.controller.LoginPageController">
+   <children>
+      <VBox alignment="TOP_RIGHT" layoutX="432.8" prefHeight="559.0" prefWidth="409.0" spacing="40.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="433.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <VBox alignment="TOP_CENTER" prefHeight="178.0" prefWidth="452.0" spacing="30.0">
+               <children>
+                  <Label text="User Name" textFill="#080808" underline="true">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="txtUserName" prefHeight="26.0" prefWidth="410.0" promptText="user name" style="-fx-background-radius: 20;" VBox.vgrow="ALWAYS">
+                     <effect>
+                        <Glow level="0.0" />
+                     </effect>
+                  </TextField>
+               </children>
+            </VBox>
+            <VBox alignment="TOP_CENTER" prefHeight="182.0" prefWidth="452.0" spacing="30.0">
+               <children>
+                  <Label text="Password" underline="true">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="txtPassWord" prefHeight="26.0" prefWidth="279.0" promptText="password" style="-fx-background-radius: 20;" VBox.vgrow="ALWAYS">
+                     <effect>
+                        <Glow level="0.0" />
+                     </effect>
+                  </TextField>
+               </children>
+            </VBox>
+            <HBox alignment="TOP_CENTER" prefHeight="120.0" prefWidth="452.0" spacing="40.0">
+               <children>
+                  <Button mnemonicParsing="false" onAction="#btnGoDashBoardOnAction" prefHeight="46.0" prefWidth="179.0" style="-fx-background-color: #B42121;" text="Login" textFill="#ece4e4" underline="true" HBox.hgrow="ALWAYS">
+                     <font>
+                        <Font name="System Bold" size="23.0" />
+                     </font>
+                  </Button>
+                  <Button mnemonicParsing="false" onAction="#btnGoSingUpPageOnAction" prefHeight="50.0" prefWidth="179.0" style="-fx-background-color: #B42121;" text="Sign up" textFill="#f2f0f0" underline="true" HBox.hgrow="ALWAYS">
+                     <font>
+                        <Font name="System Bold" size="23.0" />
+                     </font>
+                  </Button>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+      <AnchorPane prefHeight="559.0" prefWidth="430.0" style="-fx-background-color: #000000;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Label layoutX="125.0" layoutY="57.0" prefHeight="82.0" prefWidth="179.0" text="LIFE" textFill="#f7f2f2">
+               <font>
+                  <Font name="Arial Bold" size="77.0" />
+               </font>
+            </Label>
+            <Label layoutX="52.0" layoutY="190.0" text="FITNESS" textFill="#f7f2f2">
+               <font>
+                  <Font name="Arial" size="77.0" />
+               </font>
+            </Label>
+            <Label layoutX="127.0" layoutY="322.0" text="GYM" textFill="#f2eeee">
+               <font>
+                  <Font name="Arial Bold" size="77.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
