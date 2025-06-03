@@ -12,9 +12,9 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="642.0" prefWidth="820.0" style="-fx-background-color: linear-gradient(to bottom right, #e3f2fd, #bbdefb);" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.lifefitnessgym.controller.MemberPageController">
+<AnchorPane prefHeight="599.0" prefWidth="820.0" style="-fx-background-color: linear-gradient(to bottom right, #e3f2fd, #bbdefb);" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.lifefitnessgym.controller.MemberPageController">
    <children>
-      <VBox layoutX="11.2" layoutY="12.0" prefHeight="240.0" prefWidth="570.0" spacing="20.0" style="-fx-padding: 20px; -fx-background-color: #ffffff; -fx-background-radius: 20px; -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.2), 20, 0, 0, 10);" AnchorPane.leftAnchor="11.0" AnchorPane.rightAnchor="239.0" AnchorPane.topAnchor="12.0">
+      <VBox layoutX="11.2" layoutY="12.0" prefHeight="254.0" prefWidth="570.0" spacing="20.0" style="-fx-padding: 20px; -fx-background-color: #ffffff; -fx-background-radius: 20px; -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.2), 20, 0, 0, 10);" AnchorPane.leftAnchor="11.0" AnchorPane.rightAnchor="239.0" AnchorPane.topAnchor="12.0">
          <children>
             <HBox prefHeight="26.0" prefWidth="200.0" spacing="14.0">
                <children>
@@ -43,7 +43,7 @@
                         <Font name="Arial" size="15.0" />
                      </font>
                   </Label>
-                  <TextField fx:id="txtAddress" prefHeight="26.0" prefWidth="407.0" promptText="colombo" style="-fx-background-radius: 20;" HBox.hgrow="ALWAYS" />
+                  <TextField fx:id="txtAddress" prefHeight="26.0" prefWidth="407.0" promptText="colombo" style="-fx-background-radius: 20; -fx-background-color: #f5f8fa; -fx-border-color: #a7d9f7; -fx-border-radius: 10; -fx-padding: 10px 15px; -fx-font-size: 14; -fx-text-fill: #333333; -fx-prompt-text-fill: #95a5a6;" HBox.hgrow="ALWAYS" />
                </children>
             </HBox>
             <HBox prefHeight="22.0" prefWidth="200.0" spacing="10.0">
@@ -53,27 +53,27 @@
                         <Font name="Arial" size="15.0" />
                      </font>
                   </Label>
-                  <TextField fx:id="txtContact" prefHeight="26.0" prefWidth="407.0" promptText="077777777" style="-fx-background-radius: 20;" HBox.hgrow="ALWAYS" />
+                  <TextField fx:id="txtContact" prefHeight="26.0" prefWidth="407.0" promptText="077777777" style="-fx-background-radius: 20; -fx-background-color: #f5f8fa; -fx-border-color: #a7d9f7; -fx-border-radius: 10; -fx-padding: 10px 15px; -fx-font-size: 14; -fx-text-fill: #333333; -fx-prompt-text-fill: #95a5a6;" HBox.hgrow="ALWAYS" />
                </children>
             </HBox>
             <HBox alignment="TOP_CENTER" prefHeight="50.0" prefWidth="530.0" spacing="20.0">
                <children>
-                  <Button fx:id="btnReset" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#btnResetPageOnAction" prefHeight="26.0" prefWidth="103.0" style="-fx-background-color: #D3D3D3; -fx-background-radius: 5;" text="reset" HBox.hgrow="ALWAYS">
+                  <Button fx:id="btnReset" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#btnResetPageOnAction" prefHeight="26.0" prefWidth="103.0" style="-fx-background-color: linear-gradient(to right, #6a11cb, #2575fc); -fx-text-fill: white; -fx-font-size: 15px; -fx-font-weight: bold; -fx-background-radius: 10px; -fx-padding: 10px 20px; -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.2), 10, 0, 0, 5); -fx-cursor: hand;" text="reset" HBox.hgrow="ALWAYS">
                      <font>
                         <Font name="Arial Black" size="12.0" />
                      </font>
                   </Button>
-                  <Button fx:id="btnDelete" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#btnDeleteMemberOnAction" prefHeight="26.0" prefWidth="100.0" style="-fx-background-color: #fd5c63; -fx-background-radius: 5;" text="delete" HBox.hgrow="ALWAYS">
+                  <Button fx:id="btnDelete" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#btnDeleteMemberOnAction" prefHeight="26.0" prefWidth="100.0" style="-fx-background-color: linear-gradient(to right, #ff416c, #ff4b2b); -fx-background-radius: 10; -fx-text-fill: white; -fx-font-size: 15; -fx-font-weight: bold; -fx-padding: 10px 20px; -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.2), 10, 0, 0, 5); -fx-cursor: hand;" text="delete" HBox.hgrow="ALWAYS">
                      <font>
                         <Font name="Arial Black" size="12.0" />
                      </font>
                   </Button>
-                  <Button fx:id="btnUpdate" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#btnUpdateMemberOnAction" prefHeight="26.0" prefWidth="96.0" style="-fx-background-color: #87CEEB; -fx-background-radius: 5;" text="update" HBox.hgrow="ALWAYS">
+                  <Button fx:id="btnUpdate" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#btnUpdateMemberOnAction" prefHeight="26.0" prefWidth="96.0" style="-fx-background-color: linear-gradient(to right, #00c6ff, #0072ff); -fx-background-radius: 10; -fx-text-fill: white; -fx-font-size: 15; -fx-font-weight: bold; -fx-padding: 10px 20px; -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.2), 10, 0, 0, 5); -fx-cursor: hand;" text="update" HBox.hgrow="ALWAYS">
                      <font>
                         <Font name="Arial Black" size="11.0" />
                      </font>
                   </Button>
-                  <Button fx:id="btnSave" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#btnSaveMemberOnAction" prefHeight="7.0" prefWidth="103.0" style="-fx-background-color: linear-gradient(to right, #11998e, #38ef7d); -fx-background-radius: 10; -fx-text-fill: white; -fx-font-size: 15; -fx-font-weight: bold; -fx-padding: 10px 20px; -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.2), 10, 0, 0, 5); -fx-cursor: 10;" text="save" HBox.hgrow="ALWAYS">
+                  <Button fx:id="btnSave" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#btnSaveMemberOnAction" prefHeight="7.0" prefWidth="103.0" style="-fx-background-color: linear-gradient(to right, #11998e, #38ef7d); -fx-background-radius: 10; -fx-text-fill: white; -fx-font-size: 15; -fx-font-weight: bold; -fx-padding: 10px 20px; -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.2), 10, 0, 0, 5); -fx-cursor: hand;" text="save" HBox.hgrow="ALWAYS">
                      <font>
                         <Font name="Arial Black" size="12.0" />
                      </font>
@@ -82,7 +82,7 @@
             </HBox>
          </children>
       </VBox>
-      <TableView fx:id="memberTable" layoutX="11.2" layoutY="280.0" onMouseClicked="#onClickTable" prefHeight="353.0" prefWidth="798.0" style="-fx-background-color: #ffffff; -fx-background-radius: 20px; -fx-border-color: #cfe9f7; -fx-border-width: 1px; -fx-border-radius: 20px; -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.1), 10, 0, 0, 5);" AnchorPane.bottomAnchor="9.0" AnchorPane.leftAnchor="11.0" AnchorPane.rightAnchor="11.0" AnchorPane.topAnchor="280.0">
+      <TableView fx:id="memberTable" layoutX="11.2" layoutY="344.8" onMouseClicked="#onClickTable" prefHeight="238.0" prefWidth="798.0" style="-fx-background-color: #ffffff; -fx-background-radius: 20px; -fx-border-color: #cfe9f7; -fx-border-width: 1px; -fx-border-radius: 20px; -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.1), 10, 0, 0, 5);" AnchorPane.bottomAnchor="16.0" AnchorPane.leftAnchor="11.0" AnchorPane.rightAnchor="11.0" AnchorPane.topAnchor="345.0">
         <columns>
           <TableColumn fx:id="colId" prefWidth="75.0" style="-fx-font-size: 14px; -fx-font-weight: bold; -fx-background-color: #e0f2f7; -fx-text-fill: #4a4a4a; -fx-border-color: #ffff;" text="Member Id" />
           <TableColumn fx:id="colName" prefWidth="75.0" style="-fx-font-size: 14px; -fx-font-weight: bold; -fx-background-color: #e0f2f7; -fx-text-fill: #4a4a4a; -fx-border-color: #ffff;" text="Name" />
@@ -93,9 +93,9 @@
             <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
          </columnResizePolicy>
       </TableView>
-      <HBox alignment="TOP_RIGHT" layoutX="532.0" layoutY="27.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="193.0" prefWidth="190.0" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="27.0">
+      <HBox alignment="TOP_RIGHT" layoutX="532.0" layoutY="27.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="192.0" prefWidth="190.0" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="27.0">
          <children>
-            <ImageView fitHeight="192.0" fitWidth="190.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="217.0" fitWidth="190.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../images/LIFE%20FITNESS.png" />
                </image></ImageView>

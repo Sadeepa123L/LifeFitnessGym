@@ -44,6 +44,9 @@ public class MemberPageController implements Initializable {
     public Button btnDelete;
     public Button btnReset;
 
+    private final String namePattern = "^[A-Za-z ]+$";
+    private final String addressPattern = "^[A-Za-z ]+$";
+    private final String phonePattern = "^(?:0|\\+94)(7[0-9]|1[0-9]|2[0-9])\\d{7}$";
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
@@ -97,24 +100,41 @@ public class MemberPageController implements Initializable {
         String memberAddress = txtAddress.getText();
         String memberContact = txtContact.getText();
 
+        boolean isValidName = memberName.matches(namePattern);
+        boolean isValidAddress = memberAddress.matches(addressPattern);
+        boolean isValidPhone = memberContact.matches(phonePattern);
+
+//        if (!isValidName) return;
+
+        txtName.setStyle(txtName.getStyle() + ";-fx-border-color: #7367F0;");
+        txtAddress.setStyle(txtAddress.getStyle() + ";-fx-border-color: #7367F0;");
+        txtContact.setStyle(txtContact.getStyle() + ";-fx-border-color: #7367F0;");
+
+        if (!isValidName) txtName.setStyle(txtName.getStyle() + ";-fx-border-color: red;");
+        if (!isValidAddress) txtAddress.setStyle(txtAddress.getStyle() + ";-fx-border-color: red;");
+        if (!isValidPhone) txtContact.setStyle(txtContact.getStyle() + ";-fx-border-color: red;");
+
+
         MemberDto memberDto = new MemberDto(
                 memberId,
                 memberName,
                 memberAddress,
                 memberContact
         );
-        try {
-            boolean isSaved = memberModel.saveMember(memberDto);
+        if (isValidName && isValidAddress && isValidPhone) {
+            try {
+                boolean isSaved = memberModel.saveMember(memberDto);
 
-            if (isSaved) {
-                resetPage();
-                new Alert(Alert.AlertType.INFORMATION, "Member saved successfully.").show();
-            } else {
+                if (isSaved) {
+                    resetPage();
+                    new Alert(Alert.AlertType.INFORMATION, "Member saved successfully.").show();
+                } else {
+                    new Alert(Alert.AlertType.ERROR, "Fail to save member.").show();
+                }
+            } catch (Exception e) {
+                e.printStackTrace();
                 new Alert(Alert.AlertType.ERROR, "Fail to save member.").show();
             }
-        } catch (Exception e) {
-            e.printStackTrace();
-            new Alert(Alert.AlertType.ERROR, "Fail to save member.").show();
         }
 
     }
