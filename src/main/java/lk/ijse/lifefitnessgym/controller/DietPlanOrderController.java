@@ -70,6 +70,7 @@ public class DietPlanOrderController implements Initializable {
             orderDate.setText(LocalDate.now().toString());
 
             cmbPlanId.getSelectionModel().clearSelection();
+            cmbMemberId.getSelectionModel().clearSelection();
             lblMemberName.setText("");
             lblPlanName.setText("");
             lblItemPrice.setText("");

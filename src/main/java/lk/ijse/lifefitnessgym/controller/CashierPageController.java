@@ -34,6 +34,9 @@ public class CashierPageController implements Initializable {
 
     private CashierModel cashierModel = new CashierModel();
 
+    private final String namePattern = "^[A-Za-z ]+$";
+    private final String phonePattern = "^(?:0|\\+94)(7[0-9]|1[0-9]|2[0-9])\\d{7}$";
+
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         colCashierId.setCellValueFactory(new PropertyValueFactory<>("cashierId"));
@@ -83,23 +86,33 @@ public class CashierPageController implements Initializable {
         String cashierName = txtCashierName.getText();
         String cashierContact = txtCashierContact.getText();
 
+        boolean isValidName = cashierName.matches(namePattern);
+        boolean isValidContact = cashierContact.matches(phonePattern);
+
+        txtCashierName.setStyle(txtCashierName.getStyle() + ";-fx-border-color: #7367F0;");
+        txtCashierContact.setStyle(txtCashierContact.getStyle() + ";-fx-border-color: #7367F0;");
+
+        if(!isValidName) txtCashierName.setStyle(txtCashierName.getStyle() + ";-fx-border-color: red;");
+        if(!isValidContact) txtCashierContact.setStyle(txtCashierContact.getStyle() + ";-fx-border-color: red;");
+
         CashierDto cashierDto = new CashierDto(
                 cashierId,
                 cashierName,
                 cashierContact
         );
-
-        try {
-            boolean isSaved = cashierModel.saveCashier(cashierDto);
-            if (isSaved) {
-                resetPage();
-                new Alert(Alert.AlertType.INFORMATION, "Cashier saved successfully.").show();
-            } else {
+        if(isValidName && isValidContact) {
+            try {
+                boolean isSaved = cashierModel.saveCashier(cashierDto);
+                if (isSaved) {
+                    resetPage();
+                    new Alert(Alert.AlertType.INFORMATION, "Cashier saved successfully.").show();
+                } else {
+                    new Alert(Alert.AlertType.ERROR, "Fail to save cashier.").show();
+                }
+            } catch (Exception e) {
+                e.printStackTrace();
                 new Alert(Alert.AlertType.ERROR, "Fail to save cashier.").show();
             }
-        }catch (Exception e){
-            e.printStackTrace();
-            new Alert(Alert.AlertType.ERROR, "Fail to save cashier.").show();
         }
     }
 

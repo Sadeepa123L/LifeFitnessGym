@@ -5,49 +5,102 @@
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="473.0" prefWidth="729.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.lifefitnessgym.controller.DietPlanPageController">
+<AnchorPane prefHeight="627.0" prefWidth="1086.0" style="-fx-background-color: linear-gradient(to bottom right, #c3e8e1, #a7d9f7);" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.lifefitnessgym.controller.DietPlanPageController">
     <children>
-        <Label layoutX="14.0" layoutY="14.0" prefHeight="22.0" prefWidth="82.0" text="Diet Plan Id">
-            <font>
-                <Font size="15.0" />
-            </font>
-        </Label>
-        <Label layoutX="14.0" layoutY="52.0" prefHeight="22.0" prefWidth="110.0" text="Diet Plan Name">
-            <font>
-                <Font size="15.0" />
-            </font>
-        </Label>
-        <Label layoutX="14.0" layoutY="88.0" prefHeight="22.0" prefWidth="92.0" text="Diet Purpose">
-            <font>
-                <Font size="15.0" />
-            </font>
-        </Label>
-        <Label layoutX="14.0" layoutY="129.0" prefHeight="22.0" prefWidth="74.0" text="Price">
-            <font>
-                <Font size="15.0" />
-            </font>
-        </Label>
-        <TextField fx:id="txtDietName" layoutX="126.0" layoutY="50.0" prefHeight="26.0" prefWidth="407.0" />
-        <TextField fx:id="txtPurpose" layoutX="126.0" layoutY="86.0" prefHeight="26.0" prefWidth="407.0" />
-        <TextField fx:id="txtPrice" layoutX="126.0" layoutY="127.0" prefHeight="26.0" prefWidth="407.0" />
-        <Button fx:id="btnSave" layoutX="591.0" layoutY="13.0" mnemonicParsing="false" onAction="#btnSaveDietOnAction" prefHeight="26.0" prefWidth="109.0" text="save" />
-        <Button fx:id="btnUpdate" layoutX="590.0" layoutY="50.0" mnemonicParsing="false" onAction="#btnUpdateDietOnAction" prefHeight="26.0" prefWidth="110.0" text="update" />
-        <Button fx:id="btnDelete" layoutX="590.0" layoutY="86.0" mnemonicParsing="false" onAction="#btnDeleteDietOnAction" prefHeight="26.0" prefWidth="110.0" text="delete" />
-        <TableView fx:id="dietTable" layoutX="-1.0" layoutY="179.0" onMouseClicked="#onClickTable" prefHeight="283.0" prefWidth="730.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="-1.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="179.0">
+        <VBox layoutX="15.2" layoutY="11.0" prefHeight="287.0" prefWidth="796.0" style="-fx-padding: 20px; -fx-background-color: #ffffff; -fx-background-radius: 20px; -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.2), 20, 0, 0, 10);" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="275.0" AnchorPane.topAnchor="11.0">
+            <children>
+                <HBox prefHeight="100.0" prefWidth="200.0" spacing="10.0">
+                    <children>
+                        <Label prefHeight="22.0" prefWidth="111.0" text="Diet Plan Id">
+                            <font>
+                                <Font name="Arial" size="15.0" />
+                            </font>
+                        </Label>
+                        <Label fx:id="lblDietId" prefHeight="18.0" prefWidth="77.0" text="1" />
+                    </children>
+                </HBox>
+                <HBox prefHeight="100.0" prefWidth="200.0" spacing="10.0">
+                    <children>
+                        <Label lineSpacing="10.0" prefHeight="36.0" prefWidth="110.0" text="Diet Plan Name">
+                            <font>
+                                <Font name="Arial" size="15.0" />
+                            </font>
+                        </Label>
+                        <TextField fx:id="txtDietName" prefHeight="26.0" prefWidth="407.0" promptText="name" style="-fx-background-radius: 20; -fx-background-color: #f5f8fa; -fx-border-color: #a7d9f7; -fx-border-radius: 10; -fx-padding: 10px 15px; -fx-font-size: 14; -fx-text-fill: #333333; -fx-prompt-text-fill: #95a5a6;" HBox.hgrow="ALWAYS" />
+                    </children>
+                </HBox>
+                <HBox prefHeight="100.0" prefWidth="200.0" spacing="10.0">
+                    <children>
+                        <Label prefHeight="37.0" prefWidth="110.0" text="Diet Purpose">
+                            <font>
+                                <Font name="Arial" size="15.0" />
+                            </font>
+                        </Label>
+                        <TextField fx:id="txtPurpose" prefHeight="26.0" prefWidth="407.0" promptText="cardio" style="-fx-background-radius: 20; -fx-background-color: #f5f8fa; -fx-border-color: #a7d9f7; -fx-border-radius: 10; -fx-padding: 10px 15px; -fx-font-size: 14; -fx-text-fill: #333333; -fx-prompt-text-fill: #95a5a6;" HBox.hgrow="ALWAYS" />
+                    </children>
+                </HBox>
+                <HBox prefHeight="100.0" prefWidth="200.0" spacing="10.0">
+                    <children>
+                        <Label prefHeight="35.0" prefWidth="112.0" text="Price">
+                            <font>
+                                <Font name="Arial" size="15.0" />
+                            </font>
+                        </Label>
+                        <TextField fx:id="txtPrice" prefHeight="42.0" prefWidth="407.0" promptText="1000.00" style="-fx-background-radius: 20; -fx-background-color: #f5f8fa; -fx-border-color: #a7d9f7; -fx-border-radius: 10; -fx-padding: 10px 15px; -fx-font-size: 14; -fx-text-fill: #333333; -fx-prompt-text-fill: #95a5a6;" HBox.hgrow="ALWAYS" />
+                    </children>
+                </HBox>
+                <HBox alignment="CENTER" prefHeight="26.0" prefWidth="716.0" spacing="15.0">
+                    <children>
+                        <Button fx:id="btnReset" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#btnResetPageOnAction" prefHeight="26.0" prefWidth="103.0" style="-fx-background-color: linear-gradient(to right, #6a11cb, #2575fc); -fx-text-fill: white; -fx-font-size: 15px; -fx-font-weight: bold; -fx-background-radius: 10px; -fx-padding: 10px 20px; -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.2), 10, 0, 0, 5); -fx-cursor: hand;" text="reset" HBox.hgrow="ALWAYS">
+                            <font>
+                                <Font name="Arial Black" size="12.0" />
+                            </font>
+                        </Button>
+                        <Button fx:id="btnDelete" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#btnDeleteDietOnAction" prefHeight="26.0" prefWidth="100.0" style="-fx-background-color: linear-gradient(to right, #ff416c, #ff4b2b); -fx-background-radius: 10; -fx-text-fill: white; -fx-font-size: 15; -fx-font-weight: bold; -fx-padding: 10px 20px; -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.2), 10, 0, 0, 5); -fx-cursor: hand;" text="delete" HBox.hgrow="ALWAYS">
+                            <font>
+                                <Font name="Arial Black" size="12.0" />
+                            </font>
+                        </Button>
+                        <Button fx:id="btnUpdate" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#btnUpdateDietOnAction" prefHeight="26.0" prefWidth="96.0" style="-fx-background-color: linear-gradient(to right, #00c6ff, #0072ff); -fx-background-radius: 10; -fx-text-fill: white; -fx-font-size: 15; -fx-font-weight: bold; -fx-padding: 10px 20px; -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.2), 10, 0, 0, 5); -fx-cursor: hand;" text="update" HBox.hgrow="ALWAYS">
+                            <font>
+                                <Font name="Arial Black" size="11.0" />
+                            </font>
+                        </Button>
+                        <Button fx:id="btnSave" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#btnSaveDietOnAction" prefHeight="7.0" prefWidth="103.0" style="-fx-background-color: linear-gradient(to right, #11998e, #38ef7d); -fx-background-radius: 10; -fx-text-fill: white; -fx-font-size: 15; -fx-font-weight: bold; -fx-padding: 10px 20px; -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.2), 10, 0, 0, 5); -fx-cursor: hand;" text="save" HBox.hgrow="ALWAYS">
+                            <font>
+                                <Font name="Arial Black" size="12.0" />
+                            </font>
+                        </Button>
+                    </children>
+                </HBox>
+            </children>
+        </VBox>
+        <TableView fx:id="dietTable" layoutX="15.2" layoutY="312.8" onMouseClicked="#onClickTable" prefHeight="301.0" prefWidth="821.0" style="-fx-background-color: #ffffff; -fx-background-radius: 20px; -fx-border-color: #cfe9f7; -fx-border-width: 1px; -fx-border-radius: 20px; -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.1), 10, 0, 0, 5);" AnchorPane.bottomAnchor="13.0" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="17.0" AnchorPane.topAnchor="313.0">
             <columns>
-                <TableColumn fx:id="colDietId" prefWidth="75.0" text="Diet Id" />
-                <TableColumn fx:id="colDietName" prefWidth="75.0" text="Diet Plan Name" />
-                <TableColumn fx:id="colPurpose" prefWidth="75.0" text="Diet Purpose" />
-                <TableColumn fx:id="colPrice" prefWidth="75.0" text="Price" />
+                <TableColumn fx:id="colDietId" prefWidth="75.0" style="-fx-font-size: 14px; -fx-font-weight: bold; -fx-background-color: #e0f2f7; -fx-text-fill: #4a4a4a;" text="Diet Id" />
+                <TableColumn fx:id="colDietName" prefWidth="75.0" style="-fx-font-size: 14px; -fx-font-weight: bold; -fx-background-color: #e0f2f7; -fx-text-fill: #4a4a4a;" text="Diet Plan Name" />
+                <TableColumn fx:id="colPurpose" prefWidth="75.0" style="-fx-font-size: 14px; -fx-font-weight: bold; -fx-background-color: #e0f2f7; -fx-text-fill: #4a4a4a;" text="Diet Purpose" />
+                <TableColumn fx:id="colPrice" prefWidth="75.0" style="-fx-font-size: 14px; -fx-font-weight: bold; -fx-background-color: #e0f2f7; -fx-text-fill: #4a4a4a;" text="Price" />
             </columns>
             <columnResizePolicy>
                 <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
             </columnResizePolicy>
         </TableView>
-        <Button fx:id="btnReset" layoutX="591.0" layoutY="129.0" mnemonicParsing="false" onAction="#btnResetPageOnAction" prefHeight="26.0" prefWidth="110.0" text="reset" />
-        <Label fx:id="lblDietId" layoutX="126.0" layoutY="17.0" text="1" />
+      <HBox layoutX="869.0" layoutY="42.0" prefHeight="192.0" prefWidth="180.0" AnchorPane.bottomAnchor="392.6" AnchorPane.rightAnchor="25.0" AnchorPane.topAnchor="42.0">
+         <children>
+            <ImageView fitHeight="192.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/LIFE%20FITNESS.png" />
+               </image>
+            </ImageView>
+         </children>
+      </HBox>
     </children>
 </AnchorPane>
