@@ -11,9 +11,9 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="ancMain" prefHeight="599.0" prefWidth="820.0" style="-fx-background-color: linear-gradient(to bottom right, #c3e8e1, #a7d9f7);" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.lifefitnessgym.controller.LoginPageController">
+<AnchorPane fx:id="ancMain" prefHeight="599.0" prefWidth="820.0" style="-fx-background-color: #f0f0f0;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.lifefitnessgym.controller.LoginPageController">
    <children>
-      <VBox alignment="CENTER" prefHeight="599.0" prefWidth="350.0" style="-fx-background-color: linear-gradient(to top right, #1a2a6c, #b21f1f, #fdbb2d); -fx-background-radius: 20;" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="10.0">
+      <VBox alignment="CENTER" prefHeight="599.0" prefWidth="350.0" style="-fx-background-color: #333333; -fx-background-radius: 20;" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="10.0">
          <children>
             <ImageView fitHeight="200.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
                <image>
@@ -28,7 +28,7 @@
                   <Insets top="20.0" />
                </VBox.margin>
             </Label>
-            <Label text="Empowering Your Fitness Journey" textFill="WHITE" wrapText="true">
+            <Label text="Empowering Your Fitness Journey" textFill="#cccccc" wrapText="true">
                <font>
                   <Font name="System Italic" size="14.0" />
                </font>
@@ -38,41 +38,41 @@
             </Label>
          </children>
       </VBox>
-      <VBox alignment="CENTER" layoutX="370.0" layoutY="10.0" prefHeight="579.0" prefWidth="440.0" spacing="30.0" style="-fx-padding: 30px; -fx-background-color: #ffffff; -fx-background-radius: 20px; -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.2), 20, 0, 0, 10);" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="370.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
+      <VBox alignment="CENTER" layoutX="370.0" layoutY="10.0" prefHeight="579.0" prefWidth="440.0" spacing="30.0" style="-fx-padding: 30px; -fx-background-color: #ffffff; -fx-background-radius: 20px; -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.1), 20, 0, 0, 10);" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="370.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
          <children>
-            <Label text="Welcome Back!" textFill="#2c3e50">
+            <Label text="Welcome Back!" textFill="#222222">
                <font>
                   <Font name="Arial Black" size="28.0" />
                </font>
             </Label>
-            <Label text="Sign in to your account" textFill="#5a5a5a">
+            <Label text="Sign in to your user account" textFill="#555555">
                <font>
                   <Font name="Arial" size="16.0" />
                </font>
             </Label>
             <VBox alignment="CENTER" prefHeight="80.0" prefWidth="300.0" spacing="10.0">
                <children>
-                  <Label text="User Name" textFill="#5a5a5a">
+                  <Label text="User Name" textFill="#555555">
                      <font>
                         <Font name="Arial Bold" size="14.0" />
                      </font>
                   </Label>
-                  <TextField fx:id="txtUserName" prefHeight="40.0" prefWidth="300.0" promptText="Enter your username" style="-fx-background-radius: 20; -fx-background-color: #f5f8fa; -fx-border-color: #a7d9f7; -fx-border-radius: 10; -fx-padding: 10px 15px; -fx-font-size: 14; -fx-text-fill: #333333; -fx-prompt-text-fill: #95a5a6;" />
+                  <TextField fx:id="txtUserName" prefHeight="40.0" prefWidth="300.0" promptText="Enter your username" style="-fx-background-radius: 10; -fx-background-color: #e0e0e0; -fx-border-color: #aaaaaa; -fx-border-width: 1px; -fx-border-radius: 10; -fx-padding: 10px 15px; -fx-font-size: 14; -fx-text-fill: #333333; -fx-prompt-text-fill: #777777;" />
                </children>
             </VBox>
             <VBox alignment="CENTER" prefHeight="80.0" prefWidth="300.0" spacing="10.0">
                <children>
-                  <Label text="Password" textFill="#5a5a5a">
+                  <Label text="Password" textFill="#555555">
                      <font>
                         <Font name="Arial Bold" size="14.0" />
                      </font>
                   </Label>
-                  <TextField fx:id="txtPassWord" prefHeight="40.0" prefWidth="300.0" promptText="Enter your password" style="-fx-background-radius: 20; -fx-background-color: #f5f8fa; -fx-border-color: #a7d9f7; -fx-border-radius: 10; -fx-padding: 10px 15px; -fx-font-size: 14; -fx-text-fill: #333333; -fx-prompt-text-fill: #95a5a6;" />
+                  <TextField fx:id="txtPassWord" prefHeight="40.0" prefWidth="300.0" promptText="Enter your password" style="-fx-background-radius: 10; -fx-background-color: #e0e0e0; -fx-border-color: #aaaaaa; -fx-border-width: 1px; -fx-border-radius: 10; -fx-padding: 10px 15px; -fx-font-size: 14; -fx-text-fill: #333333; -fx-prompt-text-fill: #777777;" />
                </children>
             </VBox>
             <HBox alignment="CENTER" prefHeight="50.0" prefWidth="400.0">
                <children>
-                  <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#btnGoDashBoardOnAction" prefHeight="45.0" prefWidth="200.0" style="-fx-background-color: linear-gradient(to right, #11998e, #38ef7d); -fx-background-radius: 20; -fx-text-fill: white; -fx-font-size: 18; -fx-font-weight: bold; -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.2), 10, 0, 0, 5); -fx-cursor: hand;" text="Login" HBox.hgrow="ALWAYS">
+                  <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#btnGoDashBoardOnAction" prefHeight="45.0" prefWidth="200.0" style="-fx-background-color: #333333; -fx-background-radius: 20; -fx-text-fill: white; -fx-font-size: 18; -fx-font-weight: bold; -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.2), 10, 0, 0, 5); -fx-cursor: hand;" text="Login" HBox.hgrow="ALWAYS">
                      <font>
                         <Font name="Arial Black" size="12.0" />
                      </font>
@@ -81,12 +81,12 @@
             </HBox>
             <HBox alignment="CENTER">
                <children>
-                  <Label text="Don't have an account?" textFill="#5a5a5a">
+                  <Label text="Don't have an user account?" textFill="#555555">
                      <font>
                         <Font name="Arial" size="12.0" />
                      </font>
                   </Label>
-                  <Button onAction="#btnGoSingUpPageOnAction" style="-fx-background-color: transparent; -fx-text-fill: #007bff; -fx-font-weight: bold; -fx-underline: true;" text="Sign Up Here" textFill="#007bff">
+                  <Button onAction="#btnGoSingUpPageOnAction" style="-fx-background-color: transparent; -fx-text-fill: #333333; -fx-font-weight: bold; -fx-underline: true;" text="Sign Up Here">
                      <font>
                         <Font name="Arial Bold" size="12.0" />
                      </font>
