@@ -9,11 +9,11 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="ancMain" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1400.0" style="-fx-background-color: #ffff;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.lifefitnessgym.controller.StartpageController">
+<AnchorPane fx:id="ancMain" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1400.0" style="-fx-background-color: #ffff;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.lifefitnessgym.controller.StartPageController">
    <children>
       <ImageView fitHeight="700.0" fitWidth="1203.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../images/LIFE.png" />
+            <Image url="@../images/LIFE%20(1).png" />
          </image>
       </ImageView>
       <VBox alignment="CENTER" layoutX="1128.0" layoutY="429.0" prefHeight="248.0" prefWidth="250.0" spacing="30.0" AnchorPane.bottomAnchor="23.0" AnchorPane.rightAnchor="21.599999999999994">

@@ -9,7 +9,7 @@ import javafx.scene.layout.AnchorPane;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-public class StartpageController implements Initializable {
+public class StartPageController implements Initializable {
 
     public AnchorPane ancMain;
 
@@ -34,7 +34,7 @@ public class StartpageController implements Initializable {
     }
 
     public void btnGoSignUpPageOnAction(ActionEvent actionEvent) {
-        NavigateTo("/view/SignUpPage.fxml");
+        NavigateTo("/view/SingUpPage.fxml");
     }
 
     @Override

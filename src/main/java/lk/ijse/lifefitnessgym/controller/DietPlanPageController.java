@@ -37,6 +37,11 @@ public class DietPlanPageController implements Initializable {
 
     private DietPlanModel dietPlanModel = new DietPlanModel();
 
+    private final String namePattern = "^[A-Za-z ]+$";
+    private final String purposePattern = "^[A-Za-z ]+$";
+    //private final String pricePattern = "^([1-9]\\d*(\\.\\d+)?|0\\.\\d*[1-9])$";
+            ;
+
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
@@ -61,27 +66,40 @@ public class DietPlanPageController implements Initializable {
         String purpose = txtPurpose.getText();
         Double price = Double.parseDouble(payment);
 
+        boolean isValidName = namePattern.matches(namePattern);
+        boolean isValidPurpose = purposePattern.matches(purposePattern);
+        //boolean isValidPrice = pricePattern.matches(pricePattern);
+
+        txtDietName.setStyle(txtDietName.getStyle() + ";-fx-border-color: #7367F0;");
+        txtPurpose.setStyle(txtPurpose.getStyle() + ";-fx-border-color: #7367F0;");
+        //txtPrice.setStyle(txtPrice.getStyle() + ";-fx-border-color: #7367F0;");
+
+        if(!isValidName) txtDietName.setStyle(txtDietName.getStyle() + ";-fx-border-color: red;");
+        if(!isValidPurpose) txtPurpose.setStyle(txtPurpose.getStyle() + ";-fx-border-color: red;");
+        //if(!isValidPrice) txtPrice.setStyle(txtPrice.getStyle() + ";-fx-border-color: red;");*/
+
         DietPlanDto dietPlanDto = new DietPlanDto(
                 dietId,
                 dietName,
                 purpose,
                 price
         );
+        if(isValidName && isValidPurpose) {
+            try {
+                boolean isSaved = dietPlanModel.saveDietPlan(dietPlanDto);
 
-        try {
-            boolean isSaved = dietPlanModel.saveDietPlan(dietPlanDto);
+                if (isSaved) {
+                    resetPage();
+                    new Alert(Alert.AlertType.INFORMATION, "Diet plan saved successfully.").show();
+                } else {
+                    new Alert(Alert.AlertType.ERROR, "Fail to save diet plan.").show();
+                }
 
-            if(isSaved){
-                resetPage();
-                new Alert(Alert.AlertType.INFORMATION,"Diet plan saved successfully.").show();
-            }else{
-                new Alert(Alert.AlertType.ERROR,"Fail to save diet plan.").show();
+            } catch (Exception e) {
+                e.printStackTrace();
+                new Alert(Alert.AlertType.ERROR, "Fail to save diet plan.").show();
             }
-
-        }catch (Exception e){
-            e.printStackTrace();
-            new Alert(Alert.AlertType.ERROR,"Fail to save diet plan.").show();
-        }
+       }
     }
 
     public void btnUpdateDietOnAction(ActionEvent actionEvent) {
