@@ -15,7 +15,7 @@
 <?import javafx.scene.text.Font?>
 
 <AnchorPane prefHeight="569.0" prefWidth="955.0" style="-fx-background-color: linear-gradient(to bottom right, #c3e8e1, #a7d9f7);" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.lifefitnessgym.controller.DietPlanOrderController"> <children>
-  <VBox layoutX="16.0" layoutY="11.2" prefHeight="222.0" prefWidth="687.0" spacing="15.0" style="-fx-padding: 20; -fx-background-color: #ffff; -fx-background-radius: 20; -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.2), 20, 0, 0, 10);" AnchorPane.leftAnchor="16.0" AnchorPane.rightAnchor="252.0" AnchorPane.topAnchor="11.0"> <children>
+  <VBox layoutX="16.0" layoutY="52.0" prefHeight="214.0" prefWidth="687.0" spacing="15.0" style="-fx-padding: 20; -fx-background-color: #ffff; -fx-background-radius: 20; -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.2), 20, 0, 0, 10);" AnchorPane.leftAnchor="16.0" AnchorPane.rightAnchor="252.0" AnchorPane.topAnchor="52.0"> <children>
       <HBox alignment="CENTER_LEFT" prefHeight="27.2">
           <children>
               <HBox alignment="CENTER_LEFT" prefHeight="21.0" prefWidth="796.0">
@@ -125,7 +125,7 @@
       </HBox>
   </children>
   </VBox>
-  <TableView fx:id="DietOrderTable" layoutX="14.4" layoutY="287.0" prefHeight="242.0" prefWidth="928.0" style="-fx-background-color: #ffffff; -fx-background-radius: 20px; -fx-border-color: #cfe9f7; -fx-border-width: 1px; -fx-border-radius: 20px; -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.1), 10, 0, 0, 5);" AnchorPane.bottomAnchor="74.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="13.0" AnchorPane.topAnchor="252.20000000000002"> <columns>
+  <TableView fx:id="DietOrderTable" layoutX="14.4" layoutY="287.2" prefHeight="208.0" prefWidth="928.0" style="-fx-background-color: #ffffff; -fx-background-radius: 20px; -fx-border-color: #cfe9f7; -fx-border-width: 1px; -fx-border-radius: 20px; -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.1), 10, 0, 0, 5);" AnchorPane.bottomAnchor="74.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="13.0" AnchorPane.topAnchor="287.0"> <columns>
       <TableColumn fx:id="colOrderId" prefWidth="75.0" style="-fx-font-size: 14px; -fx-font-weight: bold; -fx-background-color: #e0f2f7; -fx-text-fill: #4a4a4a;" text="Order Id" /> <TableColumn fx:id="colMemberId" prefWidth="75.0" style="-fx-font-size: 14px; -fx-font-weight: bold; -fx-background-color: #e0f2f7; -fx-text-fill: #4a4a4a;" text="Member Id" />
       <TableColumn fx:id="colPlanId" prefWidth="75.0" style="-fx-font-size: 14px; -fx-font-weight: bold; -fx-background-color: #e0f2f7; -fx-text-fill: #4a4a4a;" text="Diet Plan Id" />
       <TableColumn fx:id="colPrice" prefWidth="75.0" style="-fx-font-size: 14px; -fx-font-weight: bold; -fx-background-color: #e0f2f7; -fx-text-fill: #4a4a4a;" text="Price" />
@@ -153,7 +153,7 @@
           </Button>
       </children>
   </HBox>
-      <HBox layoutX="748.0" layoutY="16.0" prefHeight="142.0" prefWidth="192.0" AnchorPane.bottomAnchor="361.0" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="16.0">
+      <HBox layoutX="749.0" layoutY="67.0" prefHeight="142.0" prefWidth="192.0" AnchorPane.bottomAnchor="309.8" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="67.0">
          <children>
             <ImageView fitHeight="197.0" fitWidth="192.0" pickOnBounds="true" preserveRatio="true">
                <image>
@@ -162,5 +162,10 @@
             </ImageView>
          </children>
       </HBox>
+      <Label layoutX="398.0" layoutY="3.0" text="Diet Plan Order Page" underline="true">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
 </children>
 </AnchorPane>

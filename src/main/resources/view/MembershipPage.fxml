@@ -14,7 +14,7 @@
 
 <AnchorPane prefHeight="599.0" prefWidth="935.0" style="-fx-background-color: linear-gradient(to bottom right, #c3e8e1, #a7d9f7);" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.lifefitnessgym.controller.MembershipPageController">
     <children>
-        <VBox layoutX="14.0" layoutY="14.0" prefHeight="270.0" prefWidth="657.0" spacing="10.0" style="-fx-padding: 20px; -fx-background-color: #ffffff; -fx-background-radius: 20px; -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.2), 20, 0, 0, 10);" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="246.0" AnchorPane.topAnchor="14.0">
+        <VBox layoutX="15.2" layoutY="48.8" prefHeight="264.0" prefWidth="673.0" spacing="10.0" style="-fx-padding: 20px; -fx-background-color: #ffffff; -fx-background-radius: 20px; -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.2), 20, 0, 0, 10);" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="247.0" AnchorPane.topAnchor="49.0">
             <children>
                 <HBox alignment="CENTER_LEFT" prefHeight="26.0" prefWidth="200.0" spacing="14.0">
                     <children>
@@ -33,7 +33,7 @@
                                 <Font name="Arial" size="15.0" />
                             </font>
                         </Label>
-                        <TextField fx:id="txtMembershipType" prefHeight="26.0" prefWidth="407.0" promptText="e.g., Monthly, Annually" style="-fx-background-radius: 20; -fx-background-color: #f5f8fa; -fx-border-color: #a7d9f7; -fx-border-radius: 10; -fx-padding: 10px 15px; -fx-font-size: 14; -fx-text-fill: #333333; -fx-prompt-text-fill: #95a5a6;" HBox.hgrow="ALWAYS" />
+                        <TextField fx:id="txtMembershipType" prefHeight="26.0" prefWidth="407.0" promptText="Monthly, Annually" style="-fx-background-radius: 20; -fx-background-color: #f5f8fa; -fx-border-color: #a7d9f7; -fx-border-radius: 10; -fx-padding: 10px 15px; -fx-font-size: 14; -fx-text-fill: #333333; -fx-prompt-text-fill: #95a5a6;" HBox.hgrow="ALWAYS" />
                     </children>
                 </HBox>
                 <HBox alignment="CENTER_LEFT" prefHeight="26.0" prefWidth="200.0" spacing="10.0">
@@ -43,7 +43,7 @@
                                 <Font name="Arial" size="15.0" />
                             </font>
                         </Label>
-                        <TextField fx:id="txtPeriod" prefHeight="26.0" prefWidth="407.0" promptText="e.g., 1 Month, 1 Year" style="-fx-background-radius: 20; -fx-background-color: #f5f8fa; -fx-border-color: #a7d9f7; -fx-border-radius: 10; -fx-padding: 10px 15px; -fx-font-size: 14; -fx-text-fill: #333333; -fx-prompt-text-fill: #95a5a6;" HBox.hgrow="ALWAYS" />
+                        <TextField fx:id="txtPeriod" prefHeight="26.0" prefWidth="407.0" promptText="1 Month, 1 Year" style="-fx-background-radius: 20; -fx-background-color: #f5f8fa; -fx-border-color: #a7d9f7; -fx-border-radius: 10; -fx-padding: 10px 15px; -fx-font-size: 14; -fx-text-fill: #333333; -fx-prompt-text-fill: #95a5a6;" HBox.hgrow="ALWAYS" />
                     </children>
                 </HBox>
                 <HBox alignment="CENTER_LEFT" prefHeight="26.0" prefWidth="200.0" spacing="10.0">
@@ -53,7 +53,7 @@
                                 <Font name="Arial" size="15.0" />
                             </font>
                         </Label>
-                        <TextField fx:id="txtPrice" prefHeight="42.0" prefWidth="486.0" promptText="e.g., 5000.00" style="-fx-background-radius: 20; -fx-background-color: #f5f8fa; -fx-border-color: #a7d9f7; -fx-border-radius: 10; -fx-padding: 10px 15px; -fx-font-size: 14; -fx-text-fill: #333333; -fx-prompt-text-fill: #95a5a6;" HBox.hgrow="ALWAYS" />
+                        <TextField fx:id="txtPrice" prefHeight="42.0" prefWidth="486.0" promptText="5000.00" style="-fx-background-radius: 20; -fx-background-color: #f5f8fa; -fx-border-color: #a7d9f7; -fx-border-radius: 10; -fx-padding: 10px 15px; -fx-font-size: 14; -fx-text-fill: #333333; -fx-prompt-text-fill: #95a5a6;" HBox.hgrow="ALWAYS" />
                     </children>
                 </HBox>
                 <HBox alignment="TOP_RIGHT" prefHeight="50.0" prefWidth="530.0" spacing="20.0">
@@ -82,7 +82,7 @@
                 </HBox>
             </children>
         </VBox>
-        <TableView fx:id="membershipTable" layoutX="12.8" layoutY="290.4" onMouseClicked="#onClickTable" prefHeight="300.0" prefWidth="887.0" style="-fx-background-color: #ffffff; -fx-background-radius: 20px; -fx-border-color: #cfe9f7; -fx-border-width: 1px; -fx-border-radius: 20px; -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.1), 10, 0, 0, 5);" AnchorPane.bottomAnchor="9.0" AnchorPane.leftAnchor="13.0" AnchorPane.rightAnchor="17.0" AnchorPane.topAnchor="290.0">
+        <TableView fx:id="membershipTable" layoutX="12.8" layoutY="326.4" onMouseClicked="#onClickTable" prefHeight="264.0" prefWidth="905.0" style="-fx-background-color: #ffffff; -fx-background-radius: 20px; -fx-border-color: #cfe9f7; -fx-border-width: 1px; -fx-border-radius: 20px; -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.1), 10, 0, 0, 5);" AnchorPane.bottomAnchor="9.0" AnchorPane.leftAnchor="13.0" AnchorPane.rightAnchor="17.0" AnchorPane.topAnchor="326.0">
             <columns>
                 <TableColumn fx:id="colMembershipId" prefWidth="75.0" style="-fx-font-size: 14px; -fx-font-weight: bold; -fx-background-color: #e0f2f7; -fx-text-fill: #4a4a4a;" text="Membership Id" />
                 <TableColumn fx:id="colType" prefWidth="75.0" style="-fx-font-size: 14px; -fx-font-weight: bold; -fx-background-color: #e0f2f7; -fx-text-fill: #4a4a4a;" text="Membership Type" />
@@ -93,7 +93,7 @@
                 <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
             </columnResizePolicy>
         </TableView>
-      <HBox layoutX="718.0" layoutY="33.0" prefHeight="194.0" prefWidth="185.0" AnchorPane.bottomAnchor="371.80000000000007" AnchorPane.rightAnchor="22.599999999999994" AnchorPane.topAnchor="33.0">
+      <HBox layoutX="723.0" layoutY="86.0" prefHeight="194.0" prefWidth="185.0" AnchorPane.bottomAnchor="318.79999999999995" AnchorPane.rightAnchor="17.600000000000023" AnchorPane.topAnchor="86.0">
          <children>
             <ImageView fitHeight="194.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
                <image>
@@ -102,5 +102,10 @@
             </ImageView>
          </children>
       </HBox>
+      <Label layoutX="397.0" layoutY="14.0" text="Membership Page" underline="true">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
     </children>
 </AnchorPane>

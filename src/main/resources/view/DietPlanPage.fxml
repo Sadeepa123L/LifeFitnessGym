@@ -14,7 +14,7 @@
 
 <AnchorPane prefHeight="627.0" prefWidth="1086.0" style="-fx-background-color: linear-gradient(to bottom right, #c3e8e1, #a7d9f7);" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.lifefitnessgym.controller.DietPlanPageController">
     <children>
-        <VBox layoutX="15.2" layoutY="11.0" prefHeight="287.0" prefWidth="796.0" style="-fx-padding: 20px; -fx-background-color: #ffffff; -fx-background-radius: 20px; -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.2), 20, 0, 0, 10);" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="275.0" AnchorPane.topAnchor="11.0">
+        <VBox layoutX="15.2" layoutY="58.4" prefHeight="287.0" prefWidth="796.0" style="-fx-padding: 20px; -fx-background-color: #ffffff; -fx-background-radius: 20px; -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.2), 20, 0, 0, 10);" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="275.0" AnchorPane.topAnchor="58.0">
             <children>
                 <HBox prefHeight="100.0" prefWidth="200.0" spacing="10.0">
                     <children>
@@ -82,7 +82,7 @@
                 </HBox>
             </children>
         </VBox>
-        <TableView fx:id="dietTable" layoutX="15.2" layoutY="312.8" onMouseClicked="#onClickTable" prefHeight="301.0" prefWidth="821.0" style="-fx-background-color: #ffffff; -fx-background-radius: 20px; -fx-border-color: #cfe9f7; -fx-border-width: 1px; -fx-border-radius: 20px; -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.1), 10, 0, 0, 5);" AnchorPane.bottomAnchor="13.0" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="17.0" AnchorPane.topAnchor="313.0">
+        <TableView fx:id="dietTable" layoutX="15.2" layoutY="368.0" onMouseClicked="#onClickTable" prefHeight="246.0" prefWidth="1054.0" style="-fx-background-color: #ffffff; -fx-background-radius: 20px; -fx-border-color: #cfe9f7; -fx-border-width: 1px; -fx-border-radius: 20px; -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.1), 10, 0, 0, 5);" AnchorPane.bottomAnchor="13.0" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="17.0" AnchorPane.topAnchor="368.0">
             <columns>
                 <TableColumn fx:id="colDietId" prefWidth="75.0" style="-fx-font-size: 14px; -fx-font-weight: bold; -fx-background-color: #e0f2f7; -fx-text-fill: #4a4a4a;" text="Diet Id" />
                 <TableColumn fx:id="colDietName" prefWidth="75.0" style="-fx-font-size: 14px; -fx-font-weight: bold; -fx-background-color: #e0f2f7; -fx-text-fill: #4a4a4a;" text="Diet Plan Name" />
@@ -93,7 +93,7 @@
                 <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
             </columnResizePolicy>
         </TableView>
-      <HBox layoutX="869.0" layoutY="42.0" prefHeight="192.0" prefWidth="180.0" AnchorPane.bottomAnchor="392.6" AnchorPane.rightAnchor="25.0" AnchorPane.topAnchor="42.0">
+      <HBox layoutX="869.0" layoutY="106.0" prefHeight="192.0" prefWidth="180.0" AnchorPane.bottomAnchor="329.2" AnchorPane.rightAnchor="25.0" AnchorPane.topAnchor="106.0">
          <children>
             <ImageView fitHeight="192.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
                <image>
@@ -102,5 +102,10 @@
             </ImageView>
          </children>
       </HBox>
+      <Label layoutX="488.0" layoutY="14.0" text="Diet Plan Page" underline="true">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
     </children>
 </AnchorPane>

@@ -142,6 +142,13 @@ public class SupplementOrderController implements Initializable {
         loadCashierIds();
         loadSupplementIds();
         orderDate.setText(LocalDate.now().toString());
+
+        cmbMemberId.getSelectionModel().clearSelection();
+        cmbCashierId.getSelectionModel().clearSelection();
+        cmbSupId.getSelectionModel().clearSelection();
+        lblSuppName.setText("");
+        lblSuppPrice.setText("");
+        lblSuppQty.setText("");
     }
 
     public void btnAddToCartOnAction(ActionEvent actionEvent) {
@@ -214,7 +221,8 @@ public class SupplementOrderController implements Initializable {
         cartData.add(cartTm);
     }
 
-    public void btnResetOnAction(ActionEvent actionEvent) {
+    public void btnResetOnAction(ActionEvent actionEvent) throws SQLException {
+        refreshPage();
     }
 
     public void btnPlaceOrderOnAction(ActionEvent actionEvent) {
