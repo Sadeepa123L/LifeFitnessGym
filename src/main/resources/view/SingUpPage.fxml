@@ -106,7 +106,7 @@
                         <Font name="Arial" size="12.0" />
                      </font>
                   </Label>
-                  <Button onAction="#btnGoLoginPageOnAction" style="-fx-background-color: transparent; -fx-text-fill: #333333; -fx-font-weight: bold; -fx-underline: true;" text="Login Here">
+                  <Button onAction="#btnGoLogin" style="-fx-background-color: transparent; -fx-text-fill: #333333; -fx-font-weight: bold; -fx-underline: true;" text="Login Here">
                      <font>
                         <Font name="Arial Bold" size="12.0" />
                      </font>

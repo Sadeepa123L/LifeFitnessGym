@@ -7,6 +7,7 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
@@ -116,16 +117,12 @@
                     <children>
                         <HBox alignment="CENTER_LEFT" prefHeight="20.0" prefWidth="288.0">
                             <children>
-                                <Label prefHeight="20.0" prefWidth="158.0" style="-fx-font-family: 'Inter', sans-serif; -fx-text-fill: #2c3e50;" text="Session time">
+                                <Label prefHeight="20.0" prefWidth="158.0" style="-fx-font-family: 'Inter', sans-serif; -fx-text-fill: #2c3e50;" text="Session time (Hours)">
                                     <font>
                                         <Font size="14.0" />
                                     </font>
                                 </Label>
-                                <Label fx:id="lblTime" prefHeight="18.0" prefWidth="164.0" style="-fx-font-family: 'Inter', sans-serif; -fx-font-weight: bold; -fx-text-fill: #28a745;" text="time">
-                                    <font>
-                                        <Font size="14.0" />
-                                    </font>
-                                </Label>
+                        <TextField fx:id="txtSessionTime" promptText="2" />
                             </children>
                         </HBox>
                         <HBox alignment="CENTER_LEFT" prefHeight="20.0" prefWidth="259.0">

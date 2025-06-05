@@ -31,7 +31,7 @@ public class ReservationModel {
                     resultSet.getString(1),
                     resultSet.getString(2),
                     resultSet.getString(3),
-                    resultSet.getString(4),
+                    resultSet.getInt(4),
                     resultSet.getDouble(5),
                     resultSet.getString(6)
             );

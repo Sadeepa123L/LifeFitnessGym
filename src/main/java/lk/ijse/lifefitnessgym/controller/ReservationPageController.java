@@ -38,8 +38,8 @@ public class ReservationPageController implements Initializable {
     public TableColumn<ReservationTm, String> colSessionId;
     public TableColumn<ReservationTm, Double> colSessionPrice;
     public TableColumn<ReservationTm, Date> colDate;
-    public Label lblTime;
     public TableColumn<ReservationTm, String> colTime;
+    public TextField txtSessionTime;
 
     ReservationModel reservationModel = new ReservationModel();
     MemberModel memberModel = new MemberModel();
@@ -109,6 +109,7 @@ public class ReservationPageController implements Initializable {
             loadNextId();
             orderDate.setText(LocalDate.now().toString());
 
+            txtSessionTime.setText("");
             cmbMemberId.getSelectionModel().clearSelection();
             lblMemberName.setText("");
             cmbSessionId.getSelectionModel().clearSelection();
@@ -131,17 +132,23 @@ public class ReservationPageController implements Initializable {
         String sessionId = (String) cmbSessionId.getSelectionModel().getSelectedItem();
         String date = orderDate.getText();
 
-        String time = lblTime.getText();
+        String t = txtSessionTime.getText();
+        int time = Integer.parseInt(t);
 
         String payment = lblSessionPrice.getText();
+
         Double price = Double.parseDouble(payment);
+
+        Double total = price * time;
+        txtSessionTime.setStyle("");
+
 
         ReservationDto reservationDto = new ReservationDto(
                 orderId,
                 memberId,
                 sessionId,
                 time,
-                price,
+                total,
                 date
         );
         try {
@@ -166,11 +173,9 @@ public class ReservationPageController implements Initializable {
         if(workoutSessionDto!= null){
             lblSessionName.setText(workoutSessionDto.getSessionName());
             lblSessionPrice.setText(String.valueOf(workoutSessionDto.getPaymentPerHour()));
-            lblTime.setText(selectedSessionId);
         }else{
             lblSessionName.setText("");
             lblSessionPrice.setText("");
-            lblTime.setText("");
         }
     }
 

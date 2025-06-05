@@ -94,6 +94,7 @@ public class WorkoutSessionPageController implements Initializable {
             btnUpdate.setDisable(true);
             btnDelete.setDisable(true);
 
+            cmbTrainerId.getSelectionModel().clearSelection();
             txtSessionName.setText("");
             txtPayment.setText("");
             txtTimeTable.setText("");
@@ -234,7 +235,14 @@ public class WorkoutSessionPageController implements Initializable {
         }
     }
 
-    public void btnTrainerOnAction(ActionEvent actionEvent) {
+    public void btnTrainerOnAction(ActionEvent actionEvent) throws SQLException {
         String selectedTrainerId = cmbTrainerId.getSelectionModel().getSelectedItem();
+        String selectedTrainerName = trainerModel.findNameById(selectedTrainerId);
+
+        if(selectedTrainerName != null){
+            lblTrainerId.setText(selectedTrainerName);
+        }else{
+            lblTrainerId.setText("");
+        }
     }
 }

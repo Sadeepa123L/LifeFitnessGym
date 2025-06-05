@@ -97,4 +97,8 @@ public class SignUpPageController implements Initializable {
         load.prefHeightProperty().bind(ancSingUpPage.heightProperty());
         ancSingUpPage.getChildren().add(load);
     }
+
+    public void btnGoLogin(ActionEvent actionEvent) throws IOException {
+        loadLoginPage();
+    }
 }

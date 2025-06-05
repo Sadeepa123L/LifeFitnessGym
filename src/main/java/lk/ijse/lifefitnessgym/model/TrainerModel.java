@@ -70,5 +70,15 @@ public class TrainerModel {
         }
         return list;
     }
+    public String findNameById(String selectedTrainerId) throws SQLException {
+        ResultSet rst = CrudUtil.execute(
+                "select TrainerName from trainer where TrainerId=?",
+                selectedTrainerId
+        );
 
+        if (rst.next()) {
+            return rst.getString(1);
+        }
+        return null;
+    }
 }

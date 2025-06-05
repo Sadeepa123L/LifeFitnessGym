@@ -37,6 +37,9 @@ public class TrainerPageController implements Initializable {
     public Button btnDelete;
     public Button btnReset;
 
+    private final String namePattern = "^[A-Za-z ]+$";
+    private final String phonePattern = "^(?:0|\\+94)(7[0-9]|1[0-9]|2[0-9])\\d{7}$";
+
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         colTrainerId.setCellValueFactory(new PropertyValueFactory<>("trainerId"));
@@ -88,24 +91,34 @@ public class TrainerPageController implements Initializable {
         String trainerName = txtTrainerName.getText();
         String trainerContact = txtTrainerContact.getText();
 
+        boolean isValidName = trainerName.matches(namePattern);
+        boolean isValidContact = trainerContact.matches(phonePattern);
+
+        txtTrainerName.setStyle(txtTrainerName.getStyle() + ";-fx-border-color: #7367F0;");
+        txtTrainerContact.setStyle(txtTrainerContact.getStyle() + ";-fx-border-color: #7367F0;");
+
+        if(!isValidName) txtTrainerName.setStyle(txtTrainerName.getStyle() + ";-fx-border-color: red;");
+        if(!isValidContact) txtTrainerContact.setStyle(txtTrainerContact.getStyle() + ";-fx-border-color: red;");
+
         TrainerDto trainerDto = new TrainerDto(
                 trainerId,
                 trainerName,
                 trainerContact
         );
+        if(isValidName && isValidContact) {
+            try {
+                boolean isSaved = trainerModel.saveTrainer(trainerDto);
 
-        try {
-            boolean isSaved = trainerModel.saveTrainer(trainerDto);
-
-            if (isSaved) {
-                resetPage();
-                new Alert(Alert.AlertType.INFORMATION, "Trainer saved successfully.").show();
-            } else {
+                if (isSaved) {
+                    resetPage();
+                    new Alert(Alert.AlertType.INFORMATION, "Trainer saved successfully.").show();
+                } else {
+                    new Alert(Alert.AlertType.ERROR, "Fail to save trainer.").show();
+                }
+            } catch (Exception e) {
+                e.printStackTrace();
                 new Alert(Alert.AlertType.ERROR, "Fail to save trainer.").show();
             }
-        } catch (Exception e) {
-            e.printStackTrace();
-            new Alert(Alert.AlertType.ERROR, "Fail to save trainer.").show();
         }
     }
 
