@@ -67,7 +67,7 @@
                         <Font name="Arial Bold" size="14.0" />
                      </font>
                   </Label>
-                  <TextField fx:id="txtUserName" prefHeight="40.0" prefWidth="300.0" promptText="Enter Username" style="-fx-background-radius: 10; -fx-background-color: #e0e0e0; -fx-border-color: #aaaaaa; -fx-border-width: 1px; -fx-border-radius: 10; -fx-padding: 10px 15px; -fx-font-size: 14; -fx-text-fill: #333333; -fx-prompt-text-fill: #777777;" />
+                  <TextField fx:id="txtUserName" prefHeight="40.0" prefWidth="300.0" promptText="Enter Username (User123)" style="-fx-background-radius: 10; -fx-background-color: #e0e0e0; -fx-border-color: #aaaaaa; -fx-border-width: 1px; -fx-border-radius: 10; -fx-padding: 10px 15px; -fx-font-size: 14; -fx-text-fill: #333333; -fx-prompt-text-fill: #777777;" />
                </children>
             </VBox>
             <VBox alignment="CENTER" prefHeight="50.0" prefWidth="300.0">
@@ -77,7 +77,7 @@
                         <Font name="Arial Bold" size="14.0" />
                      </font>
                   </Label>
-                  <TextField fx:id="txtPassword" prefHeight="40.0" prefWidth="300.0" promptText="Enter Password" style="-fx-background-radius: 10; -fx-background-color: #e0e0e0; -fx-border-color: #aaaaaa; -fx-border-width: 1px; -fx-border-radius: 10; -fx-padding: 10px 15px; -fx-font-size: 14; -fx-text-fill: #333333; -fx-prompt-text-fill: #777777;" />
+                  <TextField fx:id="txtPassword" prefHeight="40.0" prefWidth="300.0" promptText="Enter Password (User@123)" style="-fx-background-radius: 10; -fx-background-color: #e0e0e0; -fx-border-color: #aaaaaa; -fx-border-width: 1px; -fx-border-radius: 10; -fx-padding: 10px 15px; -fx-font-size: 14; -fx-text-fill: #333333; -fx-prompt-text-fill: #777777;" />
                </children>
             </VBox>
             <VBox alignment="CENTER" prefHeight="50.0" prefWidth="300.0">
@@ -87,7 +87,7 @@
                         <Font name="Arial Bold" size="14.0" />
                      </font>
                   </Label>
-                  <TextField fx:id="txtEmail" prefHeight="40.0" prefWidth="300.0" promptText="Enter Email" style="-fx-background-radius: 10; -fx-background-color: #e0e0e0; -fx-border-color: #aaaaaa; -fx-border-width: 1px; -fx-border-radius: 10; -fx-padding: 10px 15px; -fx-font-size: 14; -fx-text-fill: #333333; -fx-prompt-text-fill: #777777;" />
+                  <TextField fx:id="txtEmail" prefHeight="40.0" prefWidth="300.0" promptText="Enter Email (User12@gmail.com)" style="-fx-background-radius: 10; -fx-background-color: #e0e0e0; -fx-border-color: #aaaaaa; -fx-border-width: 1px; -fx-border-radius: 10; -fx-padding: 10px 15px; -fx-font-size: 14; -fx-text-fill: #333333; -fx-prompt-text-fill: #777777;" />
                </children>
             </VBox>
             <HBox alignment="CENTER" prefHeight="50.0" prefWidth="400.0">

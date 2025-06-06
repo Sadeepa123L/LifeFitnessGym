@@ -15,9 +15,9 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="648.0" prefWidth="1098.0" style="-fx-background-color: linear-gradient(to bottom right, #c3e8e1, #a7d9f7);" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.lifefitnessgym.controller.SupplementOrderController">
+<AnchorPane prefHeight="695.0" prefWidth="1098.0" style="-fx-background-color: linear-gradient(to bottom right, #c3e8e1, #a7d9f7);" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.lifefitnessgym.controller.SupplementOrderController">
     <children>
-        <VBox layoutX="16.0" layoutY="11.2" prefHeight="335.0" prefWidth="788.0" spacing="15.0" style="-fx-padding: 20; -fx-background-color: #ffff; -fx-background-radius: 20; -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.2), 20, 0, 0, 10);" AnchorPane.leftAnchor="16.0" AnchorPane.rightAnchor="294.0" AnchorPane.topAnchor="11.0">
+        <VBox layoutX="16.0" layoutY="52.8" prefHeight="333.0" prefWidth="788.0" spacing="15.0" style="-fx-padding: 20; -fx-background-color: #ffff; -fx-background-radius: 20; -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.2), 20, 0, 0, 10);" AnchorPane.leftAnchor="16.0" AnchorPane.rightAnchor="294.0" AnchorPane.topAnchor="53.0">
             <children>
                 <HBox alignment="CENTER_LEFT" prefHeight="27.2">
                     <children>
@@ -193,7 +193,7 @@
               </HBox>
             </children>
         </VBox>
-        <TableView fx:id="tblCart" layoutX="14.4" layoutY="356.8" prefHeight="217.0" prefWidth="1001.0" style="-fx-background-color: #ffffff; -fx-background-radius: 20px; -fx-border-color: #cfe9f7; -fx-border-width: 1px; -fx-border-radius: 20px; -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.1), 10, 0, 0, 5);" AnchorPane.bottomAnchor="74.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="13.0" AnchorPane.topAnchor="357.0">
+        <TableView fx:id="tblCart" layoutX="14.4" layoutY="404.0" prefHeight="217.0" prefWidth="1071.0" style="-fx-background-color: #ffffff; -fx-background-radius: 20px; -fx-border-color: #cfe9f7; -fx-border-width: 1px; -fx-border-radius: 20px; -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.1), 10, 0, 0, 5);" AnchorPane.bottomAnchor="74.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="13.0" AnchorPane.topAnchor="404.0">
             <columns>
                 <TableColumn fx:id="colSuppId" prefWidth="75.0" style="-fx-font-size: 14px; -fx-font-weight: bold; -fx-background-color: #e0f2f7; -fx-text-fill: #4a4a4a;" text="Supplement Id" />
                 <TableColumn fx:id="colName" prefWidth="75.0" style="-fx-font-size: 14px; -fx-font-weight: bold; -fx-background-color: #e0f2f7; -fx-text-fill: #4a4a4a;" text="Name" />
@@ -226,7 +226,7 @@
                 </Button>
             </children>
         </HBox>
-        <HBox layoutX="864.0" layoutY="66.0" prefHeight="202.0" prefWidth="179.0" AnchorPane.bottomAnchor="380.0" AnchorPane.rightAnchor="40.0" AnchorPane.topAnchor="66.0">
+        <HBox layoutX="860.0" layoutY="96.0" prefHeight="202.0" prefWidth="179.0" AnchorPane.bottomAnchor="350.4" AnchorPane.rightAnchor="38.0" AnchorPane.topAnchor="96.0">
          <children>
             <ImageView fitHeight="200.0" fitWidth="218.0" pickOnBounds="true" preserveRatio="true">
                <image>
@@ -234,5 +234,10 @@
                </image>
             </ImageView>
          </children></HBox>
+      <Label layoutX="458.0" layoutY="14.0" text="Supplement Order Page" underline="true">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
     </children>
 </AnchorPane>

@@ -15,7 +15,7 @@
 
 <AnchorPane prefHeight="656.0" prefWidth="1020.0" style="-fx-background-color: linear-gradient(to bottom right, #c3e8e1, #a7d9f7);" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.lifefitnessgym.controller.SubscriptionPageController">
     <children>
-        <VBox layoutX="11.2" layoutY="12.0" prefHeight="260.0" prefWidth="730.0" spacing="20.0" style="-fx-padding: 20px; -fx-background-color: #ffffff; -fx-background-radius: 20px; -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.2), 20, 0, 0, 10);" AnchorPane.leftAnchor="11.0" AnchorPane.rightAnchor="279.0" AnchorPane.topAnchor="12.0">
+        <VBox layoutX="10.0" layoutY="64.0" prefHeight="250.0" prefWidth="729.0" spacing="20.0" style="-fx-padding: 20px; -fx-background-color: #ffffff; -fx-background-radius: 20px; -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.2), 20, 0, 0, 10);" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="281.0" AnchorPane.topAnchor="64.0">
             <children>
                   <HBox alignment="CENTER_RIGHT" prefHeight="18.0" prefWidth="598.0">
                       <children>
@@ -119,7 +119,7 @@
                 </HBox>
             </children>
         </VBox>
-        <TableView fx:id="SubscriptionTable" layoutX="11.2" layoutY="292.0" prefHeight="294.0" prefWidth="998.0" style="-fx-background-color: #ffffff; -fx-background-radius: 20px; -fx-border-color: #cfe9f7; -fx-border-width: 1px; -fx-border-radius: 20px; -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.1), 10, 0, 0, 5);" AnchorPane.bottomAnchor="70.0" AnchorPane.leftAnchor="11.0" AnchorPane.rightAnchor="11.0" AnchorPane.topAnchor="292.0">
+        <TableView fx:id="SubscriptionTable" layoutX="11.2" layoutY="336.0" prefHeight="250.0" prefWidth="998.0" style="-fx-background-color: #ffffff; -fx-background-radius: 20px; -fx-border-color: #cfe9f7; -fx-border-width: 1px; -fx-border-radius: 20px; -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.1), 10, 0, 0, 5);" AnchorPane.bottomAnchor="70.0" AnchorPane.leftAnchor="11.0" AnchorPane.rightAnchor="11.0" AnchorPane.topAnchor="336.0">
             <columns>
                 <TableColumn fx:id="colOrderId" prefWidth="75.0" style="-fx-font-size: 14px; -fx-font-weight: bold; -fx-background-color: #e0f2f7; -fx-text-fill: #4a4a4a;" text="Order Id" />
                 <TableColumn fx:id="colMemberId" prefWidth="75.0" style="-fx-font-size: 14px; -fx-font-weight: bold; -fx-background-color: #e0f2f7; -fx-text-fill: #4a4a4a;" text="Member Id" />
@@ -146,7 +146,7 @@
                   </Button>
               </children>
           </HBox>
-      <HBox layoutX="801.0" layoutY="42.0" prefHeight="188.0" prefWidth="180.0" AnchorPane.bottomAnchor="425.6" AnchorPane.rightAnchor="31.0" AnchorPane.topAnchor="42.0">
+      <HBox layoutX="799.0" layoutY="91.0" prefHeight="188.0" prefWidth="180.0" AnchorPane.bottomAnchor="377.0" AnchorPane.rightAnchor="33.0" AnchorPane.topAnchor="91.0">
          <children>
             <ImageView fitHeight="188.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
                <image>
@@ -155,5 +155,10 @@
             </ImageView>
          </children>
       </HBox>
+      <Label layoutX="442.0" layoutY="14.0" text="Subscription Page" underline="true">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
     </children>
 </AnchorPane>
