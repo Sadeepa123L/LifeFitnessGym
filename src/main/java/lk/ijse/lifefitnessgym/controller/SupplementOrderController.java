@@ -231,10 +231,10 @@ public class SupplementOrderController implements Initializable {
             return;
         }
 
-//        String selectedCustomerId = cmbCustomerId.getSelectionModel().getSelectedItem();
+
         String selectedMemberId = (String) cmbMemberId.getValue();
 
-//        if (selectedCustomerId == null){
+
         if (cmbMemberId.getSelectionModel().isEmpty()) {
             new Alert(Alert.AlertType.WARNING, "Please select member for place order..!").show();
             return;
@@ -270,8 +270,7 @@ public class SupplementOrderController implements Initializable {
                 cartList
         );
 
-//        cartData
-//        orderDetail -> {orderId, itemId, qty, price}
+
         try {
             boolean isSaved = supplementOrderModel.placeOrder(supplementOrderDto);
 
